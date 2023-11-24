@@ -1,40 +1,40 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <meta name="description" content="InfiCoder-Eval: Systematically Evaluating Question-Answering
-  for Code Large Language Models">
-  <meta name="keywords" content="InfiCoder-Eval, code-generation, large-language-model, benchmark">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  for Code Large Language Models" />
+  <meta name="keywords" content="InfiCoder-Eval, code-generation, large-language-model, benchmark" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>InfiCoder-Eval: Systematically Evaluating Question-Answering
     for Code Large Language Models</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/bulma.min.css" />
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="./static/css/index.css" />
 
-  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.table.min.css">
+  <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.table.min.css" />
   <!--  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">-->
-  <link rel="stylesheet" href="./stylesheets/layout.css">
-  <link rel="stylesheet" href="./stylesheets/index.css">
+  <link rel="stylesheet" href="./stylesheets/layout.css" />
+  <link rel="stylesheet" href="./stylesheets/index.css" />
 
   <!-- for print the table -->
   <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css" />
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" />
   <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
 
-  <link rel="icon" href="./static/images/inficoder_eval_logo2.png">
+  <link rel="icon" href="./static/images/inficoder_eval_logo2.png" />
 
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script defer="" src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
@@ -75,7 +75,7 @@
 
   <div class="container">
     <div class="column has-text-centered">
-      <img style="max-width: 200px; margin-bottom: -50px;" src="static/images/inficoder_eval_logo2.png">
+      <img style="max-width: 200px; margin-bottom: -50px;" src="static/images/inficoder_eval_logo2.png" />
     </div>
   </div>
 
@@ -91,10 +91,10 @@
               <span class="author-block">
                 InfiCoder Team @ ByteDance Ltd. and Peking University
               </span>
-              <br>
+              <br />
               <span class="author-block">
                 <!-- Main Maintainer: <a href="mailto:linyi.li@bytedance.com">Linyi Li</a> -->
-                <br>
+                <br />
                 Team Lead: <a href="mailto:hx.yang@bytedance.com">Hongxia Yang</a>
               </span>
               <!-- <span class="author-block">
@@ -111,8 +111,7 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="./static/report/inficoder_eval_report_draft.pdf"
-                    class="external-link button is-normal is-rounded is-dark" target='_blank'>
+                  <a href="./static/report/inficoder_eval_report_draft.pdf" class="external-link button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -121,15 +120,13 @@
                 </span>
                 <!-- Dataset Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/infi-coder/ffqa-evaluation-harness"
-                     class="external-link button is-normal is-rounded is-dark" target='_blank'>
+                  <a href="https://github.com/infi-coder/ffqa-evaluation-harness" class="external-link button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Inference Repo</span>
                   </a>
-                  <a href="https://github.com/infi-coder/inficoder-eval-framework"
-                     class="external-link button is-normal is-rounded is-dark" target='_blank'>
+                  <a href="https://github.com/infi-coder/inficoder-eval-framework" class="external-link button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -161,7 +158,7 @@
         <h2 class="subtitle has-text-centered">
           InfiCoder-Eval is a systematic benchmark and evaluation framework for the free-form question-answering ability of code language models.
         </h2>
-        <img src="static/images/inficoder-eval-main.png">
+        <img src="static/images/inficoder-eval-main.png" />
       </div>
     </div>
   </section>
@@ -217,21 +214,21 @@
               InfiCoder-Eval comprises 270 carefully picked high-quality Stack Overflow questions, covering 18 programming languages.
             </p>
 
-            <img src="static/images/data_domain_stats.png">
+            <img src="static/images/data_domain_stats.png" />
 
             <p>
               We recruited five domain experts to create the benchmark and annotate the correctness evaluation criteria.
               Specifically, the InfiCoder-Eval framework integrates four types of model-free metrics for evaluating the correctness: keywords matching, blank filling, unit testing, and dialogue similarity.
             </p>
 
-            <img src="static/images/data_examples.png">
+            <img src="static/images/data_examples.png" />
 
             <p>
               Below is the question type, metric type, and length statistics.
             </p>
 
             <center>
-              <img src="static/images/general_statistics.png">
+              <img src="static/images/general_statistics.png" />
             </center>
 
           </div>
@@ -249,7 +246,7 @@
           <h2 class="title is-3">Comparison</h2>
           <div class="content has-text-justified">
             <p>Existing benchmarks weigh heavily on code generation, unit-test-based evaluation, and a limited set of programming languages. InfiCoder-Eval processes a much higher diversity to reflect real-world code LLMs’ usage scenarios and is far from saturation.</p>
-            <img src="static/images/comparison.png">
+            <img src="static/images/comparison.png" />
           </div>
         </div>
       </div>
@@ -311,12 +308,12 @@
         </div>
       </div>
     </div>
-    <br>
+    <br />
     <div class="container is-max-desktop has-text-justified">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <div>
-            <img src="static/images/all_results.png">
+            <img src="static/images/all_results.png" />
           </div>
           <p>Each blue point corresponds to one open-source model, with error bars for those smaller than 30B parameters. Proprietary models are plotted as lines with uncertainty ranges.</p>
         </div>
@@ -339,10 +336,10 @@
                   </div>
                 </p>
                 <p align="left">
-                  <div class="left">For models with >30B parameters, we evaluate once due to resource limit, otherwise we evaluate three times and report the mean and standard deviation.
+                  <div class="left">For models with &gt;30B parameters, we evaluate once due to resource limit, otherwise we evaluate three times and report the mean and standard deviation.
                   </div>
                 </p>
-                <br>
+                <br />
                 <table class="table maintable stripe hover row-border order-column" id="maintable">
                   <thead>
                     <tr>
@@ -1145,7 +1142,7 @@
               <li>Set global environment variable: </li>
               <div class="highlight"><code>export INFERENCE_REPO_PATH=[evaluation repo]/batched_prompts/suite_v2.0.0_dev.csv</code></div>
             </ol>
-            <br>
+            <br />
             <h3>Step 1: Generate Response for Your Model</h3>
             <ol>
               <li>Set the working directory to <a href="https://github.com/infi-coder/ffqa-evaluation-harness">Inference Repo</a>.</li>
@@ -1160,7 +1157,7 @@
               <div class="highlight"><code>python3 [inference repo dir]/ffqa_processor.py [output raw response file path].json references.json [response csv file].csv</code></div>
               <p>This command will join the two output files above into one csv file <code>[response csv file].csv</code> which can be processed by the evaluation framework below.</p>
             </ol>
-            <br>
+            <br />
             <h3>Step 2: Evaluation (Dev Set)</h3>
             <ol>
               <li>Setup the evaluation framework: <a href="https://github.com/infi-coder/inficoder-eval-framework">Evaluation Repo</a>.</li>
@@ -1183,7 +1180,7 @@
             </ol>
             <h3>Step 3: Evaluate (Test Set)</h3>
             <p>
-              Available upon request (<a href='mailto:linyi.li@bytedance.com'>email us</a>).
+              Available upon request (<a href="mailto:linyi.li@bytedance.com">email us</a>).
             </p>
           </div>
         </div>
@@ -1223,7 +1220,7 @@
         <!-- <a class="icon-link" href="https://arxiv.org/pdf/2211.11501">
           <i class="fas fa-file-pdf" style="color:white"></i>
         </a> -->
-        <a class="icon-link" href="https://github.com/infi-coder" class="external-link" disabled>
+        <a class="external-link" href="https://github.com/infi-coder" disabled="">
           <i class="fab fa-github" style="color:white"></i>
         </a>
       </div>
@@ -1231,8 +1228,7 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This website is adapted from <a href="https://ds1000-code-gen.github.io/">ds1000-code-gen.github.io</a> and is licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              This website is adapted from <a href="https://ds1000-code-gen.github.io/">ds1000-code-gen.github.io</a> and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
             <p>
