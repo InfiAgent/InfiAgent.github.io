@@ -488,7 +488,7 @@ layout: mydefault
   title = {InfiCoder-Eval: Systematically Evaluating Question-Answering for Code Large Language Models},
   year = {2023},
   publisher = {Github Pages},
-  howpublished = "\url{https://github.com/infi-coder/inficoder-eval}"
+  howpublished = "\url{https://infi-coder.github.io/inficoder-eval/}"
 }</code></pre>
       </div>
     </div>
