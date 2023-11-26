@@ -1,13 +1,13 @@
 records:
 - comment: null
-  devscore: 61.28%
-  devscore_std: 1.45%
+  devscore: 61.03%
+  devscore_std: 1.14%
   link: https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo
   rank: 1
-  score: 58.89%
-  score_std: 0.74%
+  score: 59.13%
+  score_std: 0.58%
   size: null
-  testscore: 56.49%
+  testscore: 57.23%
   testscore_std: 0.19%
   title: GPT-4 (0613)
 - comment: null
@@ -21,12 +21,12 @@ records:
   testscore: 50.55%
   testscore_std: null
   title: deepseek-coder-33b-instruct
-- comment: null
-  devscore: 46.16%
+- omment: null
+  devscore: 46.45%
   devscore_std: 0.72%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 3
-  score: 46.70%
+  score: 46.84%
   score_std: 0.70%
   size: null
   testscore: 47.24%
@@ -143,10 +143,21 @@ records:
   testscore_std: 0.91%
   title: Qwen-14B-Chat
 - comment: null
+  devscore: 34.75%
+  devscore_std: null
+  link: https://github.com/facebookresearch/codellama
+  rank: 14
+  score: 36.36%
+  score_std: null
+  size: 34
+  testscore: 37.98%
+  testscore_std: null
+  title: CodeLlama-34B-Python
+- comment: null
   devscore: 31.78%
   devscore_std: 1.01%
   link: https://github.com/facebookresearch/codellama
-  rank: 14
+  rank: 15
   score: 33.92%
   score_std: 0.64%
   size: 13
@@ -157,24 +168,13 @@ records:
   devscore: 31.85%
   devscore_std: 0.60%
   link: https://huggingface.co/WizardLM/WizardCoder-15B-V1.0
-  rank: 15
+  rank: 16
   score: 33.34%
   score_std: 0.74%
   size: 15
   testscore: 34.83%
   testscore_std: 1.86%
   title: WizardCoder-15B-V1.0
-- comment: null
-  devscore: 32.10%
-  devscore_std: null
-  link: https://github.com/facebookresearch/codellama
-  rank: 16
-  score: 33.23%
-  score_std: null
-  size: 34
-  testscore: 34.35%
-  testscore_std: null
-  title: CodeLlama-34B-Python
 - comment: null
   devscore: 31.55%
   devscore_std: 2.01%

@@ -197,7 +197,7 @@ layout: mydefault
               still have a large gap compared to proprietary
               ones in InfiCoder-Eval and even the best proprietary LLM (GPT4) is still far from perfect (best
               open-source model Deepseek-Coder 33B Instruct
-              achieves 50.34% and GPT4 achieves 58.89%).
+              achieves 50.34% and GPT4 achieves 59.13%).
               Furthermore, our detailed analysis reveals several
               weaknesses of current code LLMs. Benchmark,
               evaluation tools, and detailed results are all publicly available.
