@@ -9,7 +9,7 @@ layout: mydefault
   <meta name="description" content="InfiAgent: An Open-source Agent Framework">
   <meta name="keywords" content="InfiAgent-DS, code-generation, large-language-model, benchmark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>InfiAgent-Eval: Evaluating Agent on Data Analysis</title>
+  <title>InfiAgent: Building and Evaluating Agent on Data Analysis</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -151,7 +151,7 @@ layout: mydefault
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
-          ADA-Agent and ADA-Agent-Eval are two sub-topics of the InfiAgent project. ADA-Agent aims to build and share a new agent system to solve data analysis tasks. and ADA-Agent-Eval is a evaluation benchmark focusing on evaluating agents on data analysis tasks.
+          The advent of Large Language Models (LLMs) has spurred the development of LLM-augmented Autonomous Agents (LAAs). These agents are capable of generating and executing code through ongoing interactions between their core LLM and the code execution environment. In this project, we introduce Infinite Agent (InfiAgent), a LAA focused data analysis and code writing. Our agent is fine-tuned on multiple open-sourced LLMs including Llama2, chatGLM3, and Code Llama. The fine-tuning process employs a unique pipeline for Supervised Fine-Tuning (SFT) data collection, involving the creation and optimization of ReAct conversations using GPT. Furthermore, we have developed a GPT-enabled automatic evaluation benchmark question set, which covers various data analysis aspects such as visualization, correlation analysis, and data transformation, providing a comprehensive means for quantitatively assessing LAAs' performance across diverse tasks. Our preliminary results suggest that Infinite Agent could significantly advance the field of autonomous code generation and execution, with potential implications in areas such as software development, data science, and automated problem-solving.
         </h2>
         <img src="static/images/inficoder-eval-main.png">
       </div>
@@ -167,28 +167,7 @@ layout: mydefault
           <h2 class="title is-3">Overview</h2>
           <div class="content has-text-justified">
             <p>
-              Large language models for code (code LLMs)
-              have made huge progress. Evaluation benchmarks
-              for code LLMs, such as <a href="https://github.com/openai/human-eval">HumanEval</a>, <a href="https://ds1000-code-gen.github.io/">DS-1000</a>,
-              and <a href="https://arxiv.org/abs/2108.07732">MBPP</a>, predominantly focus on code generation. But they are insufficient to evaluate code
-              LLMs’ multifaceted ability. To fill this gap, we
-              propose InfiCoder-Eval, a large-scale free-form
-              question-answering (QA) benchmark for code.
-              InfiCoder-Eval comprises 270 carefully picked
-              high-quality StackOverflow questions, covering
-              18 programming languages. To tackle the evaluation challenge, InfiCoder-Eval includes an evaluation framework integrating four types of model-free metrics, and domain experts design the concrete criteria for each question. As confirmed
-              with human experiments, InfiCoder-Eval evaluation aligns with humans better than model-based evaluation and runs much faster at the
-              same time. We conduct a systematic evaluation with InfiCoder-Eval for more than 30 code
-              LLMs, leading to several interesting findings. For
-              example, though open-source code LLMs show
-              competitive performance with proprietary models in code generation (e.g., HumanEval), they
-              still have a large gap compared to proprietary
-              ones in InfiCoder-Eval and even the best proprietary LLM (GPT4) is still far from perfect (best
-              open-source model Deepseek-Coder 33B Instruct
-              achieves 50.34% and GPT4 achieves 59.13%).
-              Furthermore, our detailed analysis reveals several
-              weaknesses of current code LLMs. Benchmark,
-              evaluation tools, and detailed results are all publicly available.
+              The evaluation of Large Language Models(LLMs) on generating natural language from a natural language instruction (NL2NL) and on generating code from a natural language description (NL2code) has been considered as pressing and significant challenges for different LLMs. However, there has been no effort to jointly these two abilities. As a result, we introduce InfiAgent-Eval, a benchmark to evaluate Large Language Models(LLMs) on these two aspects via an agent framework. 
             </p>
           </div>
         </div>
