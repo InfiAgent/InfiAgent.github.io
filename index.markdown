@@ -9,7 +9,7 @@ layout: mydefault
   <meta name="description" content="InfiAgent: An Open-source Agent Framework">
   <meta name="keywords" content="InfiAgent-DS, code-generation, large-language-model, benchmark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>InfiAgent: Building and Evaluating Agent on Data Analysis</title>
+  <title>InfiAgent: Building and Evaluating Agents on Data Analysis</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -34,7 +34,7 @@ layout: mydefault
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
   <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
 
-  <link rel="icon" href="./static/images/inficoder_eval_logo2.png">
+  
 
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -54,7 +54,7 @@ layout: mydefault
     </div>
     <div class="navbar-menu">
       <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-        <a class="navbar-item" href="https://github.com/infi-coder">
+        <a class="navbar-item" href="https://github.com/InfiAgent/ADA-agent/">
           <span class="icon">
             <i class="fas fa-home"></i>
           </span>
@@ -65,8 +65,8 @@ layout: mydefault
             More
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://github.com/infi-coder">
-              InfiCoder Organization
+            <a class="navbar-item" href="https://github.com/InfiAgent/ADA-agent/">
+              InfiAgent Repo
             </a>
           </div>
         </div>
