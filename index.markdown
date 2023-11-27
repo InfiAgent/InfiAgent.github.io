@@ -6,12 +6,10 @@ layout: mydefault
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="InfiCoder-Eval: Systematically Evaluating Question-Answering
-  for Code Large Language Models">
-  <meta name="keywords" content="InfiCoder-Eval, code-generation, large-language-model, benchmark">
+  <meta name="description" content="InfiAgent: An Open-source Agent Framework">
+  <meta name="keywords" content="InfiAgent-DS, code-generation, large-language-model, benchmark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>InfiCoder-Eval: Systematically Evaluating Question-Answering
-    for Code Large Language Models</title>
+  <title>InfiAgent-Eval: Evaluating Agent on Data Analysis</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -88,12 +86,11 @@ layout: mydefault
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">InfiCoder-Eval: Systematically Evaluating Question-Answering
-              for Code Large Language Models
+            <h1 class="title is-1 publication-title">InfiAgent-Eval: Evaluating Agent on Data Analysis
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                InfiCoder Team @ ByteDance Ltd. and Peking University
+                InfiAgent Team @ ByteDance Ltd. and Zhejiang University 
               </span>
               <br>
               <!-- <span class="author-block">
@@ -113,16 +110,7 @@ layout: mydefault
 
             <div class="column has-text-centered">
               <div class="publication-links">
-                <!-- PDF Link. -->
-                <span class="link-block">
-                  <a href="./static/report/inficoder_eval_report_draft.pdf"
-                    class="external-link button is-normal is-rounded is-dark" target='_blank'>
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>Report (draft version)</span>
-                  </a>
-                </span>
+                
                 <!-- Dataset Link. -->
                 <span class="link-block">
                   <a href="https://github.com/infi-coder/ffqa-evaluation-harness"
@@ -163,7 +151,7 @@ layout: mydefault
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
-          InfiCoder-Eval is a systematic benchmark and evaluation framework for the free-form question-answering ability of code language models.
+          ADA-Agent and ADA-Agent-Eval are two sub-topics of the InfiAgent project. ADA-Agent aims to build and share a new agent system to solve data analysis tasks. and ADA-Agent-Eval is a evaluation benchmark focusing on evaluating agents on data analysis tasks.
         </h2>
         <img src="static/images/inficoder-eval-main.png">
       </div>
