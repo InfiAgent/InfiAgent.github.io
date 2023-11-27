@@ -92,14 +92,14 @@
                 InfiCoder Team @ ByteDance Ltd. and Peking University
               </span>
               <br />
-              <span class="author-block">
-                <!-- Main Maintainer: <a href="mailto:linyi.li@bytedance.com">Linyi Li</a> -->
-                <br />
+              <!-- <span class="author-block">
+                Main Maintainer: <a href="mailto:linyi.li@bytedance.com">Linyi Li</a>
+                <br>
                 Team Lead: <a href="mailto:hx.yang@bytedance.com">Hongxia Yang</a>
-              </span>
+              </span> -->
               <!-- <span class="author-block">
                 <a href="https://xxx.github.io/">Siwei Wang</a><sup>1</sup></span>
-			        <br/>
+			        <br/> -->
             </div>
 
             <div class="is-size-5 publication-authors">
@@ -190,7 +190,7 @@
               still have a large gap compared to proprietary
               ones in InfiCoder-Eval and even the best proprietary LLM (GPT4) is still far from perfect (best
               open-source model Deepseek-Coder 33B Instruct
-              achieves 50.34% and GPT4 achieves 58.89%).
+              achieves 50.34% and GPT4 achieves 59.13%).
               Furthermore, our detailed analysis reveals several
               weaknesses of current code LLMs. Benchmark,
               evaluation tools, and detailed results are all publicly available.
@@ -211,12 +211,13 @@
           <h2 class="title is-3">Statistics and Examples</h2>
           <div class="content has-text-justified">
             <p>
-              InfiCoder-Eval comprises 270 carefully picked high-quality Stack Overflow questions, covering 18 programming languages.
+              InfiCoder-Eval comprises 270 carefully picked high-quality Stack Overflow questions, covering 18 programming languages, and largely <b>following the natural question distribution of <a href="https://stackoverflow.com/">Stack Overflow</a></b>.
             </p>
 
             <img src="static/images/data_domain_stats.png" />
 
             <p>
+            <br />
               We recruited five domain experts to create the benchmark and annotate the correctness evaluation criteria.
               Specifically, the InfiCoder-Eval framework integrates four types of model-free metrics for evaluating the correctness: keywords matching, blank filling, unit testing, and dialogue similarity.
             </p>
@@ -224,6 +225,7 @@
             <img src="static/images/data_examples.png" />
 
             <p>
+            <br />
               Below is the question type, metric type, and length statistics.
             </p>
 
@@ -288,6 +290,7 @@
               We leave the exploration of other hyperparameters as the future work.
             </p>
             <p>For score computation, we treat each question equally with one point each.
+              <b>Since the question frequency largely follows the Stack Overflow distribution, this score can be explained as how well the model responds to Stack Overflow questions.</b>
               Given 270 questions in the benchmark, the full score is 270, and we by default report the percentage score (achieved score divided by the full score which is 270).
               The one point for each question can be further decomposed into a few scoring points within each question.
               For example, a question may contain four keywords with weights 2, 1, 1, and 1 each.
@@ -365,15 +368,15 @@
                       
                         <td>/</td>
                       
-                      <td>58.89%</td>
+                      <td>59.13%</td>
                       
-                        <td>0.74%</td>
+                        <td>0.58%</td>
                       
-                      <td>61.28%</td>
+                      <td>61.03%</td>
                       
-                        <td>1.45%</td>
+                        <td>1.14%</td>
                       
-                      <td>56.49%</td>
+                      <td>57.23%</td>
                       
                         <td>0.19%</td>
                       
@@ -411,11 +414,11 @@
                       
                         <td>/</td>
                       
-                      <td>46.70%</td>
+                      <td>46.84%</td>
                       
                         <td>0.70%</td>
                       
-                      <td>46.16%</td>
+                      <td>46.45%</td>
                       
                         <td>0.72%</td>
                       
@@ -659,6 +662,29 @@
                     <tr>
                       <td>14</td>
                       
+                        <td><a href="https://github.com/facebookresearch/codellama">CodeLlama-34B-Python</a></td>
+                      
+                      
+                        <td>34</td>
+                      
+                      <td>36.36%</td>
+                      
+                        <td></td>
+                      
+                      <td>34.75%</td>
+                      
+                        <td></td>
+                      
+                      <td>37.98%</td>
+                      
+                        <td></td>
+                      
+                      <td></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>15</td>
+                      
                         <td><a href="https://github.com/facebookresearch/codellama">CodeLlama-13B</a></td>
                       
                       
@@ -680,7 +706,7 @@
                     </tr>
                     
                     <tr>
-                      <td>15</td>
+                      <td>16</td>
                       
                         <td><a href="https://huggingface.co/WizardLM/WizardCoder-15B-V1.0">WizardCoder-15B-V1.0</a></td>
                       
@@ -698,29 +724,6 @@
                       <td>34.83%</td>
                       
                         <td>1.86%</td>
-                      
-                      <td></td>
-                    </tr>
-                    
-                    <tr>
-                      <td>16</td>
-                      
-                        <td><a href="https://github.com/facebookresearch/codellama">CodeLlama-34B-Python</a></td>
-                      
-                      
-                        <td>34</td>
-                      
-                      <td>33.23%</td>
-                      
-                        <td></td>
-                      
-                      <td>32.10%</td>
-                      
-                        <td></td>
-                      
-                      <td>34.35%</td>
-                      
-                        <td></td>
                       
                       <td></td>
                     </tr>
@@ -1178,6 +1181,7 @@
               <div class="highlight"><code>python3 print_result_stat.py [result detail path] [summary txt path]</code></div>
               <p>In console output and <code>[summary txt path]</code>, a nice table will be printed, including the overall score and percentage and the sub-scores for each question type, metric type, and programming language.</p>
             </ol>
+            <br />
             <h3>Step 3: Evaluate (Test Set)</h3>
             <p>
               Available upon request (<a href="mailto:linyi.li@bytedance.com">email us</a>).
@@ -1198,6 +1202,29 @@
     </div>
   </section> -->
 
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Benchmarking Tutorial -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Feedback</h2>
+          <div class="content has-text-justified">
+            <script src="https://giscus.app/client.js" data-repo="infi-coder/inficoder-eval" data-repo-id="R_kgDOKxa6cg" data-category-id="DIC_kwDOKxa6cs4CbSFx" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async="">
+            </script>
+            <br />
+            <p>You can also give us feedback in the discussion issue posts of our repositories:</p>
+            <ul>
+              <li><a href="https://github.com/infi-coder/inficoder-eval/issues/1"><img alt="Static Badge" src="https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2Finfi-coder%2Finficoder-eval%2Fissues%2F1?label=General%20Discussion" /></a></li>
+              <li><a href="https://github.com/infi-coder/ffqa-evaluation-harness/issues/1"><img alt="Static Badge" src="https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2Finfi-coder%2Finficoder-eval?label=Inference%20Framework%20Discussion" /></a></li>
+              <li><a href="https://github.com/infi-coder/inficoder-eval-framework"><img alt="Static Badge" src="https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2Finfi-coder%2Finficoder-eval?label=Evaluation%20Framework%20Discussion" /></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-body">
@@ -1207,7 +1234,7 @@
   title = {InfiCoder-Eval: Systematically Evaluating Question-Answering for Code Large Language Models},
   year = {2023},
   publisher = {Github Pages},
-  howpublished = "\url{https://github.com/infi-coder/inficoder-eval}"
+  howpublished = "\url{https://infi-coder.github.io/inficoder-eval/}"
 }</code></pre>
       </div>
     </div>
@@ -1217,9 +1244,9 @@
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
-        <!-- <a class="icon-link" href="https://arxiv.org/pdf/2211.11501">
+        <a class="icon-link" href="./static/report/inficoder_eval_report_draft.pdf">
           <i class="fas fa-file-pdf" style="color:white"></i>
-        </a> -->
+        </a>
         <a class="external-link" href="https://github.com/infi-coder" disabled="">
           <i class="fab fa-github" style="color:white"></i>
         </a>

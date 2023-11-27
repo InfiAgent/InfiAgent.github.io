@@ -1,6 +1,6 @@
 # InfiCoder-Eval
 
-This is the repository that contains source code for the [InfiCoder-Eval](https://github.com/infi-coder/inficoder-eval).
+This is the repository that contains source code for the [InfiCoder-Eval](https://infi-coder.github.io/inficoder-eval/) website.
 
 ```
 

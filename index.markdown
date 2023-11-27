@@ -96,14 +96,14 @@ layout: mydefault
                 InfiCoder Team @ ByteDance Ltd. and Peking University
               </span>
               <br>
-              <span class="author-block">
-                <!-- Main Maintainer: <a href="mailto:linyi.li@bytedance.com">Linyi Li</a> -->
+              <!-- <span class="author-block">
+                Main Maintainer: <a href="mailto:linyi.li@bytedance.com">Linyi Li</a>
                 <br>
                 Team Lead: <a href="mailto:hx.yang@bytedance.com">Hongxia Yang</a>
-              </span>
+              </span> -->
               <!-- <span class="author-block">
                 <a href="https://xxx.github.io/">Siwei Wang</a><sup>1</sup></span>
-			        <br/>
+			        <br/> -->
             </div>
 
             <div class="is-size-5 publication-authors">
@@ -218,12 +218,13 @@ layout: mydefault
           <h2 class="title is-3">Statistics and Examples</h2>
           <div class="content has-text-justified">
             <p>
-              InfiCoder-Eval comprises 270 carefully picked high-quality Stack Overflow questions, covering 18 programming languages.
+              InfiCoder-Eval comprises 270 carefully picked high-quality Stack Overflow questions, covering 18 programming languages, and largely <b>following the natural question distribution of <a href="https://stackoverflow.com/">Stack Overflow</a></b>.
             </p>
 
             <img src="static/images/data_domain_stats.png">
 
             <p>
+            <br>
               We recruited five domain experts to create the benchmark and annotate the correctness evaluation criteria.
               Specifically, the InfiCoder-Eval framework integrates four types of model-free metrics for evaluating the correctness: keywords matching, blank filling, unit testing, and dialogue similarity.
             </p>
@@ -231,6 +232,7 @@ layout: mydefault
             <img src="static/images/data_examples.png">
 
             <p>
+            <br>
               Below is the question type, metric type, and length statistics.
             </p>
 
@@ -295,6 +297,7 @@ layout: mydefault
               We leave the exploration of other hyperparameters as the future work.
             </p>
             <p>For score computation, we treat each question equally with one point each.
+              <b>Since the question frequency largely follows the Stack Overflow distribution, this score can be explained as how well the model responds to Stack Overflow questions.</b>
               Given 270 questions in the benchmark, the full score is 270, and we by default report the percentage score (achieved score divided by the full score which is 270).
               The one point for each question can be further decomposed into a few scoring points within each question.
               For example, a question may contain four keywords with weights 2, 1, 1, and 1 each.
@@ -459,6 +462,7 @@ layout: mydefault
               <div class="highlight"><code>python3 print_result_stat.py [result detail path] [summary txt path]</code></div>
               <p>In console output and <code>[summary txt path]</code>, a nice table will be printed, including the overall score and percentage and the sub-scores for each question type, metric type, and programming language.</p>
             </ol>
+            <br>
             <h3>Step 3: Evaluate (Test Set)</h3>
             <p>
               Available upon request (<a href='mailto:linyi.li@bytedance.com'>email us</a>).
@@ -479,6 +483,41 @@ layout: mydefault
     </div>
   </section> -->
 
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Benchmarking Tutorial -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Feedback</h2>
+          <div class="content has-text-justified">
+            <script src="https://giscus.app/client.js"
+                    data-repo="infi-coder/inficoder-eval"
+                    data-repo-id="R_kgDOKxa6cg"
+                    data-category-id="DIC_kwDOKxa6cs4CbSFx"
+                    data-mapping="pathname"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="bottom"
+                    data-theme="preferred_color_scheme"
+                    data-lang="en"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+            <br>
+            <p>You can also give us feedback in the discussion issue posts of our repositories:</p>
+            <ul>
+              <li><a href="https://github.com/infi-coder/inficoder-eval/issues/1"><img alt="Static Badge" src="https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2Finfi-coder%2Finficoder-eval%2Fissues%2F1?label=General%20Discussion"></a></li>
+              <li><a href="https://github.com/infi-coder/ffqa-evaluation-harness/issues/1"><img alt="Static Badge" src="https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2Finfi-coder%2Finficoder-eval?label=Inference%20Framework%20Discussion"></a></li>
+              <li><a href="https://github.com/infi-coder/inficoder-eval-framework"><img alt="Static Badge" src="https://img.shields.io/badge/https%3A%2F%2Fgithub.com%2Finfi-coder%2Finficoder-eval?label=Evaluation%20Framework%20Discussion"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-body">
@@ -498,9 +537,9 @@ layout: mydefault
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
-        <!-- <a class="icon-link" href="https://arxiv.org/pdf/2211.11501">
+        <a class="icon-link" href="./static/report/inficoder_eval_report_draft.pdf">
           <i class="fas fa-file-pdf" style="color:white"></i>
-        </a> -->
+        </a>
         <a class="icon-link" href="https://github.com/infi-coder" class="external-link" disabled>
           <i class="fab fa-github" style="color:white"></i>
         </a>
