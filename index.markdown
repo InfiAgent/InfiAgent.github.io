@@ -151,9 +151,9 @@ layout: mydefault
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
-          The advent of Large Language Models (LLMs) has spurred the development of LLM-augmented Autonomous Agents (LAAs). These agents are capable of generating and executing code through ongoing interactions between their core LLM and the code execution environment. In this project, we introduce Infinite Agent (InfiAgent), a LAA focused data analysis and code writing. Our agent is fine-tuned on multiple open-sourced LLMs including Llama2, chatGLM3, and Code Llama. The fine-tuning process employs a unique pipeline for Supervised Fine-Tuning (SFT) data collection, involving the creation and optimization of ReAct conversations using GPT. Furthermore, we have developed a GPT-enabled automatic evaluation benchmark question set, which covers various data analysis aspects such as visualization, correlation analysis, and data transformation, providing a comprehensive means for quantitatively assessing LAAs' performance across diverse tasks. Our preliminary results suggest that Infinite Agent could significantly advance the field of autonomous code generation and execution, with potential implications in areas such as software development, data science, and automated problem-solving.
+          InfiAgent is a project to build and evalute agent. We start from data analysis and build an agent DA-Agent and a benchmark DA-Agent-Eval. 
         </h2>
-        <img src="static/images/inficoder-eval-main.png">
+        <img src="static/images/framework.png">
       </div>
     </div>
   </section>
@@ -167,7 +167,7 @@ layout: mydefault
           <h2 class="title is-3">Overview</h2>
           <div class="content has-text-justified">
             <p>
-              The evaluation of Large Language Models(LLMs) on generating natural language from a natural language instruction (NL2NL) and on generating code from a natural language description (NL2code) has been considered as pressing and significant challenges for different LLMs. However, there has been no effort to jointly these two abilities. As a result, we introduce InfiAgent-Eval, a benchmark to evaluate Large Language Models(LLMs) on these two aspects via an agent framework. 
+              The advent of Large Language Models (LLMs) has spurred the development of LLM-augmented Autonomous Agents (LAAs). These agents are capable of generating and executing code through ongoing interactions between their core LLM and the code execution environment. In this project, we introduce Infinite Agent (InfiAgent), a LAA focused data analysis and code writing. Our agent is fine-tuned on multiple open-sourced LLMs including Llama2, chatGLM3, and Code Llama. The fine-tuning process employs a unique pipeline for Supervised Fine-Tuning (SFT) data collection, involving the creation and optimization of ReAct conversations using GPT. Furthermore, we have developed a GPT-enabled automatic evaluation benchmark question set, which covers various data analysis aspects such as visualization, correlation analysis, and data transformation, providing a comprehensive means for quantitatively assessing LAAs' performance across diverse tasks. Our preliminary results suggest that Infinite Agent could significantly advance the field of autonomous code generation and execution, with potential implications in areas such as software development, data science, and automated problem-solving.
             </p>
           </div>
         </div>
@@ -184,28 +184,26 @@ layout: mydefault
         <div class="column is-four-fifths">
           <h2 class="title is-3">Statistics and Examples</h2>
           <div class="content has-text-justified">
-            <p>
-              InfiCoder-Eval comprises 270 carefully picked high-quality Stack Overflow questions, covering 18 programming languages, and largely <b>following the natural question distribution of <a href="https://stackoverflow.com/">Stack Overflow</a></b>.
-            </p>
+            
+            We classify files used in the evaluation dataset into 9 categories based on their domains:
 
-            <img src="static/images/data_domain_stats.png">
+            - Finance and Economics
+            - Health and Medical
+            - Demographics and Social Science
+            - Marketing and Consumer Behavior
+            - Energy and Environmental Monitoring
+            - Transportation, Logistics, and Tourism
+            - Culture, Entertainment, and Media
+            - Scientific Research and Technology
+            - Other Categories
 
-            <p>
-            <br>
-              We recruited five domain experts to create the benchmark and annotate the correctness evaluation criteria.
-              Specifically, the InfiCoder-Eval framework integrates four types of model-free metrics for evaluating the correctness: keywords matching, blank filling, unit testing, and dialogue similarity.
-            </p>
+            Here's the pie chart for the file categorization:
 
-            <img src="static/images/data_examples.png">
+             <img src="static/images/domain.png">
 
-            <p>
-            <br>
-              Below is the question type, metric type, and length statistics.
-            </p>
+            We also do statistics on the concepts involved by each question (if a question involve multiple concepts, we calculate every concept.)
 
-            <center>
-              <img src="static/images/general_statistics.png">
-            </center>
+            <img src="static/images/concept.png">
 
           </div>
         </div>
@@ -219,10 +217,20 @@ layout: mydefault
       <!-- Comparison. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Comparison</h2>
+          <h2 class="title is-3">Results</h2>
           <div class="content has-text-justified">
-            <p>Existing benchmarks weigh heavily on code generation, unit-test-based evaluation, and a limited set of programming languages. InfiCoder-Eval processes a much higher diversity to reflect real-world code LLMs’ usage scenarios and is far from saturation.</p>
-            <img src="static/images/comparison.png">
+            
+We set temperature=0.2, top_p=1.0 and frequency_penalty=0.0 for all the models.
+
+| Model                  | Accuracy by questions | Accuracy proportional by subquestions | Accuracy by subquestions |
+| ---------------------- | --------------------- | ------------------------------------- | ------------------------ |
+| GPT-4-0613             | 59.75                 | 65.26                                 | 66.05                    |
+| GPT-3.5-turbo-0613     | 47.25                 | 55.35                                 | 52.21                    |
+| Llama 2+STF            | 32.49                 | 37.53                                 | 34.01                    |
+| Code Llama 2+STF       | 39.59                 | 47.59                                 | 44.67                    |
+| Code LLaMA2 Python+SFT | 40.86                 | 47.03                                 | 40.78                    |
+| ChatGLM 3+SFT          | 14.84                 | 18.10                                 | 15.19                    |
+
           </div>
         </div>
       </div>
