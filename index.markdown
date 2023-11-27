@@ -86,7 +86,7 @@ layout: mydefault
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">InfiAgent-Eval: Evaluating Agent on Data Analysis
+            <h1 class="title is-1 publication-title">InfiAgent-Eval: Evaluating Agents on Data Analysis
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -254,7 +254,7 @@ layout: mydefault
         <h2 class="title">BibTeX</h2>
         <pre><code>@misc{li2023inficodereval,
   author = {InfiAgent Team},
-  title = {InfiAgent: Building and Evaluating Agent on Data Analysis},
+  title = {InfiAgent: Building and Evaluating Agents on Data Analysis},
   year = {2023},
   publisher = {Github Pages},
   howpublished = "\url{https://infiagent.github.io/}"
