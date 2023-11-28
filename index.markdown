@@ -354,7 +354,7 @@ layout: mydefault
         <div class="column is-four-fifths">
           <h2 class="title is-3">Have a Try!</h2>
           <div class="content has-text-justified">
-            <h3>Step 0: Setup</h3>
+            <h3>Setup</h3>
             <ol>
 		<li>We have to initialize the environment using the following code:</li>
               <pre><code>conda create -n agent python==3.9.12
@@ -363,7 +363,7 @@ pip3 install -r requirements.txt</code></pre>
 		    <pre><code>docker build -t myimg .</code></pre>
             </ol>
             <br>
-            <h3>Step 1: Demo Usage</h3>
+            <h3>Example 1: Demo Usage</h3>
             <ol>
               <li>You can easily use the following command to start a demo using APIs.</li>
 		    <pre><code># initialize poetry
@@ -371,44 +371,39 @@ poetry init
 # Supported LLM: OPEN_AI, AZURE_OPEN_AI
 # api_key is required for API-based models
 bash run_demo.sh --llm AZURE_OPEN_AI --api_key 123</code></pre>
-              <p>After running the above code, an interactive frontend interface will be displayed.</p> 
-		    <img src="static/images/concept.png">
-              <li>Determine the prompt format to use, which corresponds to task name.</li>
-              <p>We support these format for now: <code>code-ffqa-v2</code> (the default one, system + '\n' + content), <code>code-ffqa-v2-endn</code> (system + '\n' + content + '\n'), <code>code-ffqa-v2-deepseek-chat</code> (deepseek-coder-instruct format), <code>code-ffqa-v2-baichuan2</code> (baichuan2 models format), <code>code-ffqa-v2-zypher</code> (zypher-7b-beta format), <code>code-ffqa-v2-octo</code> (octopack model format), <code>code-ffqa-v2-wizard</code> (wizard-python model format), <code>code-ffqa-v2-phi</code> (phi-1.5 model format), and <code>code-ffqa-v2-inficoder</code> (our InfiCoder model format).</p>
-              <p>Feel free to contribute by adding your model format, which is easy - just slightly modify <code>bigcode_eval/tasks/code_ffqa_v200.py</code> a bit.</p> 
-              <li>Run batch inference to generate responses for question prompts.</li>
-              <div class="highlight"><code>accelerate launch [inference repo dir]/main.py --model [your model path / hugging face hub path] --tasks [determined task name above] --batch_size [batch_size] --precision bf16 --n_samples 30 --do_sample True --temperature 0.2 --top_p 0.9 --save_generations --save_references --trust_remote_code --generation_only --max_new_tokens 1024 --save_generations_path [output raw response file path].json --eos='[EOS string]'</code></div>
-              <p>This command will output two files in your working directory: <code>[output raw response file path].json</code> which stores responses and <code>references.json</code> which stores case names as the index.</p>
-              <li>Export responses and case names to evaluation-capatible csv file.</li>
-              <div class="highlight"><code>python3 [inference repo dir]/ffqa_processor.py [output raw response file path].json references.json [response csv file].csv</code></div>
-              <p>This command will join the two output files above into one csv file <code>[response csv file].csv</code> which can be processed by the evaluation framework below.</p>
+              <li>After running the above code, an interactive frontend interface will be displayed.</li> 
+		    <img src="static/images/demo_fig.png">
+              <li>You can enter prompts in the dialogue box, and if you need to upload a file, you can select the file for upload in the "browse files" section.</li>
+              <li>Click the "run code interpreter" button, and the backend will execute our pipeline. The agent will generate code and execute it in the sandbox, and the results will be returned on the interactive page upon completion.</li>
             </ol>
             <br>
-            <h3>Step 2: Evaluation (Dev Set)</h3>
+            <h3>Example 2: Running With Local Models</h3>
             <ol>
-              <li>Setup the evaluation framework: <a href="https://github.com/infi-coder/inficoder-eval-framework">Evaluation Repo</a>.</li>
+              <li>Our local LLM service is developed on vLLM. First, you can start a vLLM model serving by running this command:</li>
+		    <pre><code># Take llama-2-7b as an example
+python3 src/activities/vllm_api_server.py --model "meta-llama/Llama-2-7b-hf"  --served_model_name "meta-llama/Llama-2-7b-hf"</code></pre>
               <p>At this point, we only support Linux environment.</p>
-              <p>Run <code>pip3 install -r requirements.txt</code>, then <code>./setup.sh</code> (time costly, usually 1-2 hours) which installs necessary compilers and packages for multi-lingual execution environment.</p>
-              <li>Check the evaluation environment.</li>
-              <p>Run <code>python3 env_check.py</code> to check and fix the environment incompatibility according to the console output. If the console output is "You're good to go.", then we can proceed.</p>
-              <li>Unpack the csv output.</li>
-              <p>Unpack the csv output file from the previous inference step into a directory where each response is stored in a separate txt.</p>
-              <div class="highlight"><code>python3 adaptors/csv_response_unpacker.py [response csv file].csv [response save dir]</code></div>
-              <p>We recommend to save the responses in a directory in <code>responses/</code>, i.e., let <code>[response save dir]=responses/...</code>. The above script will create the <code>[response save dir]</code> directory if it does not exist.</p>
-              <li>Run main evaluation.</li>
-              <div class="highlight"><code>python3 grader_main.py suite_v2.0.0_dev.yaml [response save dir]</code></div>
-              <p>The evaluation takes around 15 min - 45 min.</p>
-              <p>When it finishes, there are two output files: <code>results/suite_v2.0.0_dev_[response save dir base name].txt</code> (short summary) and <code>results/suite_v2.0.0_dev_[response save dir base name].yaml</code> (all details).</p>
-              <p>You can also customized the output paths by <code>--result_summary_path</code> and <code>--result_detail_path</code> arguments respectively.</p>
-              <li>Get statistics and print the results.</li>
-              <div class="highlight"><code>python3 print_result_stat.py [result detail path] [summary txt path]</code></div>
-              <p>In console output and <code>[summary txt path]</code>, a nice table will be printed, including the overall score and percentage and the sub-scores for each question type, metric type, and programming language.</p>
+              <li>You can try this command if the serving is successfully starting:</li>
+	      <pre><code>curl http://localhost:8000/v1/completions \
+    -H "Content-Type: application/json" \
+    -d '{
+        "model": "meta-llama/Llama-2-7b-hf",
+        "prompt": "San Francisco is a",
+        "max_tokens": 7,
+        "temperature": 0
+    }'</code></pre>
+              <li>Then you can run the demo following this command:</li>
+	      <pre><code>bash run_demo.sh --llm "meta-llama/Llama-2-7b-hf"</code></pre>
             </ol>
             <br>
-            <h3>Step 3: Evaluate (Test Set)</h3>
-            <p>
-              Available upon request (<a href='mailto:linyi.li@bytedance.com'>email us</a>).
-            </p>
+            <h3>Example 3: Running Without Front-end</h3>
+	<ol>
+		<p>Our demo is designed to default to the use of the front-end. If you prefer not to use the front-end and instead perform command-line operations or process large amounts of data, you can refer to the following commands:</p>
+		<pre><code># Run with API.
+python3 ./src/activities/eval.py --llm AZURE_OPEN_AI --api_key 123
+# Run with local model.Take llama-2-7b as an example.
+python3 ./src/activities/eval.py --llm "meta-llama/Llama-2-7b-hf"</code></pre>
+	</ol>
           </div>
         </div>
       </div>
