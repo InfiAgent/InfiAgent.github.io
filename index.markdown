@@ -366,7 +366,70 @@ layout: mydefault
       </div>
     </div>
   </section>
-
+  
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Benchmarking Tutorial -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Have a Try!</h2>
+          <div class="content has-text-justified">
+            <h3>Setup</h3>
+            <ol>
+		<li>We have to initialize the environment using the following code:</li>
+              <pre><code>conda create -n agent python==3.9.12
+pip3 install -r requirements.txt</code></pre>
+		    <li>We also build a Python code sandbox in our pipeline based on docker, you can use the following code to build your docker image:</li>
+		    <pre><code>docker build -t myimg .</code></pre>
+            </ol>
+            <br>
+            <h3>Example 1: Demo Usage</h3>
+            <ol>
+              <li>You can easily use the following command to start a demo using APIs.</li>
+		    <pre><code># initialize poetry
+poetry init
+# Supported LLM: OPEN_AI, AZURE_OPEN_AI
+# api_key is required for API-based models
+bash run_demo.sh --llm AZURE_OPEN_AI --api_key 123</code></pre>
+              <li>After running the above code, an interactive frontend interface will be displayed.</li> 
+		    <img src="static/images/demo_fig.png">
+              <li>You can enter prompts in the dialogue box, and if you need to upload a file, you can select the file for upload in the "browse files" section.</li>
+              <li>Click the "run code interpreter" button, and the backend will execute our pipeline. The agent will generate code and execute it in the sandbox, and the results will be returned on the interactive page upon completion.</li>
+            </ol>
+            <br>
+            <h3>Example 2: Running With Local Models</h3>
+            <ol>
+              <li>Our local LLM service is developed on vLLM. First, you can start a vLLM model serving by running this command:</li>
+		    <pre><code># Take llama-2-7b as an example
+python3 src/activities/vllm_api_server.py --model "meta-llama/Llama-2-7b-hf"  --served_model_name "meta-llama/Llama-2-7b-hf"</code></pre>
+              <p>At this point, we only support Linux environment.</p>
+              <li>You can try this command if the serving is successfully starting:</li>
+	      <pre><code>curl http://localhost:8000/v1/completions \
+    -H "Content-Type: application/json" \
+    -d '{
+        "model": "meta-llama/Llama-2-7b-hf",
+        "prompt": "San Francisco is a",
+        "max_tokens": 7,
+        "temperature": 0
+    }'</code></pre>
+              <li>Then you can run the demo following this command:</li>
+	      <pre><code>bash run_demo.sh --llm "meta-llama/Llama-2-7b-hf"</code></pre>
+            </ol>
+            <br>
+            <h3>Example 3: Running Without Front-end</h3>
+	<ol>
+		<p>Our demo is designed to default to the use of the front-end. If you prefer not to use the front-end and instead perform command-line operations or process large amounts of data, you can refer to the following commands:</p>
+		<pre><code># Run with API.
+python3 ./src/activities/eval.py --llm AZURE_OPEN_AI --api_key 123
+# Run with local model.Take llama-2-7b as an example.
+python3 ./src/activities/eval.py --llm "meta-llama/Llama-2-7b-hf"</code></pre>
+	</ol>
+          </div>
+        </div>
+      </div>
+      <!--/ Benchmarking Tutorial -->
+    </div>
+  </section>
 
   <!-- <section class="section" id="Acknowledgement">
     <div class="container is-max-desktop content">
