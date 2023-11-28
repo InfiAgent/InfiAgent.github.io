@@ -257,13 +257,14 @@ layout: mydefault
     </div>
   </section>
 
-
+  
 
   <section class="section">
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Leaderboard</h2>
+           <img src="static/images/concept.png">
         </div>
       </div>
     </div>
@@ -290,7 +291,7 @@ layout: mydefault
                
                   <div class="left"><b>Notice</b>: We set temperature=0.2, top_p=1.0 and frequency_penalty=0.0 for all the models.
                   </div>
-                  <img src="static/images/concept.png">
+                 
                 </p>
                 <!-- <p align="left">
                   <div class="left">We evenly split the 270 benchmark questions to 135-question dev set and 135-question test set. Dev set is publicly available, and the test set is on held where evaluation is available upon request (see below for instructions). 
