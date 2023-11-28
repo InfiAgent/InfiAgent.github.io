@@ -29,8 +29,8 @@ github_username:  llylly
 
 # Build settings
 # theme: minima
-plugins:
-  - jekyll-feed
+# plugins:
+  # - jekyll-feed
 
 
 minima:

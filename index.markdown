@@ -9,7 +9,7 @@ layout: mydefault
   <meta name="description" content="InfiAgent: An Open-source Agent Framework">
   <meta name="keywords" content="InfiAgent-DS, code-generation, large-language-model, benchmark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>InfiAgent: Building and Evaluating Agents on Data Analysis</title>
+  <title>InfiAgent: Building and Evaluating Agents on Data Analysis Tasks</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -65,8 +65,8 @@ layout: mydefault
             More
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://github.com/InfiAgent/ADA-agent/">
-              InfiAgent Repo
+            <a class="navbar-item" href="https://infi-coder.github.io/inficoder-eval/">
+              InfiCoder-Eval
             </a>
           </div>
         </div>
@@ -86,7 +86,7 @@ layout: mydefault
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">InfiAgent-Eval: Evaluating Agents on Data Analysis
+            <h1 class="title is-1 publication-title">InfiAgent-Eval: Evaluating Agents on Data Analysis Tasks
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -187,21 +187,23 @@ layout: mydefault
             
             We classify files used in the evaluation dataset into 9 categories based on their domains:
 
-            - Finance and Economics
-            - Health and Medical
-            - Demographics and Social Science
-            - Marketing and Consumer Behavior
-            - Energy and Environmental Monitoring
-            - Transportation, Logistics, and Tourism
-            - Culture, Entertainment, and Media
-            - Scientific Research and Technology
-            - Other Categories
+            <ul>
+              <li>Finance and Economics </li>
+              <li>Health and Medical</li>
+              <li>Demographics and Social Science</li>
+              <li>Marketing and Consumer Behavior</li>
+              <li>Energy and Environmental Monitoring</li>
+              <li>Transportation, Logistics, and Tourism</li>
+              <li>Culture, Entertainment, and Media</li>
+              <li>Scientific Research and Technology</li>
+              <li>Other Categories</li>
+            </ul>
 
-            Here's the pie chart for the file categorization:
+            <p>Here's the pie chart for the file categorization:</p>
 
              <img src="static/images/domain.png">
 
-            We also do statistics on the concepts involved by each question (if a question involve multiple concepts, we calculate every concept.)
+            <p>We also check the statistics on the data analysis concepts involved by each question.</p>
 
             <img src="static/images/concept.png">
 
@@ -220,21 +222,128 @@ layout: mydefault
           <h2 class="title is-3">Metrics and Results</h2>
           <div class="content has-text-justified">
 
-          <img src="static/images/leaderboard.jpeg">
-          For closed-form questions, 
+            <!-- <img src="static/images/leaderboard.jpeg"> -->
+            For closed-form questions, each answer can be exactly evaluated correctness. Here, we define 3 metrics to calculate the result accuracy:
+            <ul>
+              <li>Accuracy proportional by subquestions: All the questions have a same weight and every subquestion shares the weight equally, which means a question contains more subquestions, every subquestion under it takes a lighter weight.</li>
 
-          - Accuracy proportional by subquestions: All the questions have a same weight and every subquestion shares the weight equally, which means a question contains more subquestions, every subquestion under it takes a lighter weight.
+              <li>Accuracy by questions: Only all the subquestions under the question answered correctly we consider the question right.</li>
+              <li>Accuracy by subquestions: All the subquestions have a same weight.</li>
 
-          - Accuracy by questions: Only all the subquestions under the question answered correctly we consider the question right.
-          - Accuracy by subquestions: All the subquestions have a same weight.
-
-          We set temperature=0.2, top_p=1.0 and frequency_penalty=0.0 for all the models.
+            </ul>
+            <!-- <p>We set temperature=0.2, top_p=1.0 and frequency_penalty=0.0 for all the models.</p> -->
 
 
           </div>
         </div>
       </div>
       <!--/ Comparison. -->
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Leaderboard</h2>
+        </div>
+      </div>
+    </div>
+    <!-- <br> -->
+    <!-- <div class="container is-max-desktop has-text-justified">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div>
+            <img src="static/images/all_results.png">
+          </div>
+          <p>Each blue point corresponds to one open-source model, with error bars for those smaller than 30B parameters. Proprietary models are plotted as lines with uncertainty ranges.</p>
+        </div>
+      </div>
+    </div> -->
+    <div class="cover" id="contentCover">
+      <!-- Baseline. -->
+      <div class="container-t">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="infoCard">
+              <div class="infoBody">
+                <p align="left">
+                  <div class="left"><b>Notice</b>: We set temperature=0.2, top_p=1.0 and frequency_penalty=0.0 for all the models.
+                  </div>
+                </p>
+                <!-- <p align="left">
+                  <div class="left">We evenly split the 270 benchmark questions to 135-question dev set and 135-question test set. Dev set is publicly available, and the test set is on held where evaluation is available upon request (see below for instructions). 
+                  Models are ranked according to full set scores.
+                  </div>
+                </p>
+                <p align="left">
+                  <div class="left">For models with >30B parameters, we evaluate once due to resource limit, otherwise we evaluate three times and report the mean and standard deviation.
+                  </div>
+                </p> -->
+                <br>
+                <table class="table maintable stripe hover row-border order-column" id="maintable">
+                  <thead>
+                    <tr>
+                      <th>Rank</th>
+                      <th>Model Name</th>
+                      <th># Params. (in B)</th>
+                      <th>Accuracy proportional by subquestions</th>
+                      <th>Accuracy by questions</th>
+                      <th>Accuracy by subquestions</th>
+                      <!-- <th>Dev Set Std</th>
+                      <th>Test Set Score</th>
+                      <th>Test Set Std</th>
+                      <th></th> -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for item in site.data.leaderboard.records %}
+                    <tr>
+                      <td>{{ item.rank }}</td>
+                      {% if item.link != null %}
+                        <td><a href="{{ item.link }}">{{ item.title }}</a></td>
+                      {% else %}
+                        <td>{{ item.title }}</td>
+                      {% endif %}
+                      {% if item.size != null %}
+                        <td class="dt-center">{{ item.size }}</td>
+                      {% else %}
+                        <td class="dt-center">/</td>
+                      {% endif %}
+                      <!-- <td>{{ item.score }}</td> -->
+                      <td class="dt-center">{{ item.aps_score }}</td>
+                      <td class="dt-center">{{ item.as_score }}</td>
+                      <td class="dt-center">{{ item.a_score }}</td>
+                      <!-- {% if item.score_std != null %}
+                        <td>{{ item.score_std }}</td>
+                      {% else %}
+                        <td></td>
+                      {% endif %}
+                      <td>{{ item.devscore }}</td>
+                      {% if item.devscore_std != null %}
+                        <td>{{ item.devscore_std }}</td>
+                      {% else %}
+                        <td></td>
+                      {% endif %}
+                      <td>{{ item.testscore }}</td>
+                      {% if item.testscore_std != null %}
+                        <td>{{ item.testscore_std }}</td>
+                      {% else %}
+                        <td></td>
+                      {% endif %} -->
+                      <td>{{ item.comment }}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </section>
 
@@ -295,7 +404,7 @@ layout: mydefault
   
   <script>
     $(document).ready( function () {
-      $('.mainTable').DataTable({ordering: true, order: [[3, 'desc']], columns: [{ "type": "num" },{ "type": "html" },{ "type": "num" },{ "type": "num-fmt" },{ "type": "num-fmt" },{ "type": "num-fmt" },{ "type": "num-fmt" },{ "type": "num-fmt" },{ "type": "num-fmt" },{ "type": "html", "orderable": false }]});
+      $('.mainTable').DataTable({ordering: true, order: [[3, 'desc']], columns: [{ "type": "num" },{ "type": "html" },{ "type": "num" },{ "type": "num-fmt" },{ "type": "num-fmt" },{ "type": "num-fmt" }]});
     } );
   </script>
 
