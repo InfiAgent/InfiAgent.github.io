@@ -268,7 +268,7 @@ $$
 \text{ABQ} = \frac{1}{N} \sum_{i=1}^{N} \left( \prod_{j=1}^{M_i} I_{ij} \right)
 $$
 In this expression, the product 
-\($\prod_{j=1}^{M_i} I_{ij}$\) equals 1 if all subquestions of the \(i\)-th question are answered correctly, and 0 otherwise.
+$\prod_{j=1}^{M_i} I_{ij}$ equals 1 if all subquestions of the \(i\)-th question are answered correctly, and 0 otherwise.
 Uniform Accuracy by Subquestions (UASQ):
 $$
 \text{UASQ} = \frac{1}{\sum_{i=1}^{N} M_i} \sum_{i=1}^{N} \sum_{j=1}^{M_i} I_{ij}
@@ -281,7 +281,23 @@ Here, the total accuracy is the sum of the values of the indicator function acro
     </div>
   </section>
 
-  
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Comparison. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Evaluation</h2>
+          <div class="content has-text-justified">
+
+            <!-- <img src="static/images/leaderboard.jpeg"> -->
+            
+
+          </div>
+        </div>
+      </div>
+      <!--/ Comparison. -->
+    </div>
+  </section>
 
   <section class="section">
     <div class="container is-max-desktop">
