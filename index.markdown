@@ -195,7 +195,9 @@ layout: mydefault
           We build data analysis query and response given existing csv files.  Here is the construction pipeline. 
           <img src="static/images/dataset_construction_eval.png"> 
             
-            Our dataset contains 400 questions with 72 csv files. We classify csv files used in the evaluation dataset into 9 categories based on their domains:
+            Our dataset contains 400 questions with 72 csv files. Here're some examples of our generated questions.
+	  <img src="static/images/question_examples.png"> 
+     	    We classify csv files used in the evaluation dataset into 9 categories based on their domains:
 
             <ul>
               <li>Finance and Economics </li>
