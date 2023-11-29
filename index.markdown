@@ -505,12 +505,12 @@ python3 ./src/activities/eval.py --llm "meta-llama/Llama-2-7b-hf"</code></pre>
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
-        <a class="icon-link" href="./static/report/inficoder_eval_report_draft.pdf">
+        <!-- <a class="icon-link" href="./static/report/inficoder_eval_report_draft.pdf">
           <i class="fas fa-file-pdf" style="color:white"></i>
         </a>
         <a class="icon-link" href="https://github.com/infi-coder" class="external-link" disabled>
           <i class="fab fa-github" style="color:white"></i>
-        </a>
+        </a> -->
       </div>
       <div class="columns is-centered">
         <div class="column is-8">
