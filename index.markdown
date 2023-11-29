@@ -289,9 +289,9 @@ Here, the total accuracy is the sum of the values of the indicator function acro
           <h2 class="title is-3">Evaluation</h2>
           <div class="content has-text-justified">
 
-            <!-- <img src="static/images/case-study-eval-data.png"> -->
             
-
+            For closed-form questions, we prompt LLM with question description and constraints at first time. Considering that most models hardly follow the format requirements, we add a reformat step after the models respond with gpt-3.5-turbo-16k which formats the responses with the format requirements. Here's a figure illustrating this process:
+		<!-- <img src="static/images/case-study-eval-data.png"> -->
           </div>
         </div>
       </div>
