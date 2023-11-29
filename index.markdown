@@ -290,8 +290,8 @@ Here, the total accuracy is the sum of the values of the indicator function acro
           <div class="content has-text-justified">
 
             
-            For closed-form questions, we prompt LLM with question description and constraints at first time. Considering that most models hardly follow the format requirements, we add a reformat step after the models respond with gpt-3.5-turbo-16k which formats the responses with the format requirements. Here's a figure illustrating this process:
-		<!-- <img src="static/images/case-study-eval-data.png"> -->
+            <p>For closed-form questions, we prompt LLM with question description and constraints at first time. Considering that most models hardly follow the format requirements, we add a reformat step after the models respond with gpt-3.5-turbo-16k which formats the responses with the format requirements. Here's a figure illustrating this process: </p>
+		        <img src="static/images/case-study-eval-data.png">
           </div>
         </div>
       </div>
@@ -304,7 +304,12 @@ Here, the total accuracy is the sum of the values of the indicator function acro
         <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Leaderboard</h2>
+
+          <div class="content has-text-justified">
+          <p>In this section, we furnish a comprehensive evaluation of both close-source LLMs such as GPT-4 and GPT-3.5, as well as widely-utilized open-source LLMs. It is observed that the close-source LLMs demonstrate a proficient capacity to adhere to agent directives and produce logically coherent responses.
+          <span style="color: red;"> Regrettably, the open-source LLMs enumerated below are currently incapable of adhering to agent directives or delivering substantively meaningful responses. In response to this limitation, we have developed a Supervised Fine-Tuning (SFT) dataset aimed at refining these models. For these open-source LLMs, the table below delineates the enhancements observed post-finetuning. Please anticipate the imminent release of both the SFT dataset and its comprehensive details. </span></p> 
            <img src="static/images/spider.png">
+           </div>
         </div>
       </div>
     </div>
@@ -329,7 +334,8 @@ Here, the total accuracy is the sum of the values of the indicator function acro
                 <p align="left">
                 
                
-                  <div class="left"><b>Notice</b>: We set temperature=0.2, top_p=1.0 and frequency_penalty=0.0 for all the models.  <p style="color: red;"> Regrettably, the open-source LLMs enumerated below are currently incapable of adhering to agent directives or delivering substantively meaningful responses. In response to this limitation, we have developed a Supervised Fine-Tuning (SFT) dataset aimed at refining these models. For these open-source LLMs, the table below delineates the enhancements observed post-finetuning. Please anticipate the imminent release of both the SFT dataset and its comprehensive details. </p>
+                  <div class="left"><b>Notice</b>: We set temperature=0.2, top_p=1.0 and frequency_penalty=0.0 for all the models.  
+                  <!-- <p style="color: red;"> Regrettably, the open-source LLMs enumerated below are currently incapable of adhering to agent directives or delivering substantively meaningful responses. In response to this limitation, we have developed a Supervised Fine-Tuning (SFT) dataset aimed at refining these models. For these open-source LLMs, the table below delineates the enhancements observed post-finetuning. Please anticipate the imminent release of both the SFT dataset and its comprehensive details. </p> -->
                   </div>
                  
                 </p>
