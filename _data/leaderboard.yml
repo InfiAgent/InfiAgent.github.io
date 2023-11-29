@@ -22,7 +22,7 @@ records:
   link: https://github.com/facebookresearch/codellama
   rank: 3
   size: 7
-  title: CodeLlama-7B + SFT
+  title: CodeLlama-7B
 - comment: null
   aps_score: 47.03%
   as_score: 40.78%
@@ -30,7 +30,7 @@ records:
   link: https://github.com/facebookresearch/codellama
   rank: 4
   size: 7
-  title: CodeLlama-7B-python + SFT
+  title: CodeLlama-7B-python
 - comment: null
   aps_score: 37.53%
   as_score: 34.01%
@@ -38,16 +38,23 @@ records:
   link: https://github.com/facebookresearch/llama
   rank: 5
   size: 7
-  title: Llama2-7B + SFT
+  title: Llama2-7B
+- comment: null
+  aps_score: 33.59%
+  as_score: 30.48%
+  a_score: 28.75%
+  link: https://github.com/nlpxucan/WizardLM
+  rank: 6
+  size: 7
+  title: WizardCoder-Python-7B-V1.0
 - comment: null
   aps_score: 18.10%
   as_score: 15.19%
   a_score: 14.84%
   link: https://github.com/THUDM/ChatGLM3
-  rank: 6
-  size: 7
-  title: ChatGLM3 + SFT
-
+  rank: 7
+  size: 6
+  title: ChatGLM3
 # - comment: null
 #   devscore: 50.13%
 #   devscore_std: null
