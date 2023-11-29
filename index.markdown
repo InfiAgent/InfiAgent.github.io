@@ -251,7 +251,7 @@ layout: mydefault
       <!-- Comparison. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Metrics and Results</h2>
+          <h2 class="title is-3">Metrics</h2>
           <div class="content has-text-justified">
 
             <!-- <img src="static/images/leaderboard.jpeg"> -->
