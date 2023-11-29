@@ -270,7 +270,7 @@ layout: mydefault
         <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Leaderboard</h2>
-           <img src="static/images/concept.png">
+           <img src="static/images/spider.png">
         </div>
       </div>
     </div>
