@@ -246,34 +246,24 @@ layout: mydefault
 
             <!-- <img src="static/images/leaderboard.jpeg"> -->
             
-            For closed-form questions, 
+            For closed-form questions, we have following metrics:
 
-- **Proportional Accuracy by Subquestions (PASQ):**
-
+Proportional Accuracy by Subquestions (PASQ):
 $$
 \text{PSAQ} = \frac{1}{N} \sum_{i=1}^{N} \left( \frac{1}{M_i} \sum_{j=1}^{M_i} I_{ij} \right)
 $$
-
 Here, $N$ is the total number of questions, $M_i$ is the number of subquestions for the i-th question, and $I_{ij}$ is the indicator function for the j-th subquestion of the i-th question.
-
-- **Accuracy by Questions (ABQ):**
-
+Accuracy by Questions (ABQ):
 $$
 \text{ABQ} = \frac{1}{N} \sum_{i=1}^{N} \left( \prod_{j=1}^{M_i} I_{ij} \right)
 $$
-
 In this expression, the product 
 \($\prod_{j=1}^{M_i} I_{ij}$\) equals 1 if all subquestions of the \(i\)-th question are answered correctly, and 0 otherwise.
-
-- **Uniform Accuracy by Subquestions (UASQ):**
-
+Uniform Accuracy by Subquestions (UASQ):
 $$
 \text{UASQ} = \frac{1}{\sum_{i=1}^{N} M_i} \sum_{i=1}^{N} \sum_{j=1}^{M_i} I_{ij}
 $$
-
 Here, the total accuracy is the sum of the values of the indicator function across all subquestions, normalized by the total number of subquestions in the dataset.
-
-
           </div>
         </div>
       </div>
