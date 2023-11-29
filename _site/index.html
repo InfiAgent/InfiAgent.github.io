@@ -36,6 +36,19 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML">
+  </script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    }
+  });
+  </script>
+
 </head>
 
 <body>
@@ -61,7 +74,7 @@
             More
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://infi-coder.github.io/inficoder-eval/">
+            <a class="navbar-item" href="https://github.com/InfiAgent/ADA-agent/tree/main/evaluation">
               InfiCoder-Eval
             </a>
           </div>
@@ -79,7 +92,7 @@
 
   <div class="container">
     <div class="column has-text-centered">
-      <img style="max-width: 200px; margin-bottom: -50px;" src="static/images/InfiAgent.png" />
+      <img style="max-width: 200px; margin-bottom: -50px;" src="static/images/infiagent_logo.png" />
     </div>
   </div>
 
@@ -115,13 +128,13 @@
                 
                 <!-- Dataset Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/infi-coder/ffqa-evaluation-harness" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <a href="https://github.com/InfiAgent/ADA-agent" class="external-link button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Inference Repo</span>
+                    <span>Project Repo</span>
                   </a>
-                  <a href="https://github.com/infi-coder/inficoder-eval-framework" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <a href="https://github.com/InfiAgent/ADA-agent/tree/main/evaluation" class="external-link button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -189,7 +202,9 @@
           We build data analysis query and response given existing csv files.  Here is the construction pipeline. 
           <img src="static/images/dataset_construction_eval.png" /> 
             
-            Our dataset contains 400 questions with 72 csv files. We classify csv files used in the evaluation dataset into 9 categories based on their domains:
+            Our dataset contains 400 questions with 72 csv files. Here're some examples of our generated questions.
+	  <img src="static/images/question_examples.png" /> 
+     	    We classify csv files used in the evaluation dataset into 9 categories based on their domains:
 
             <ul>
               <li>Finance and Economics </li>
@@ -229,27 +244,29 @@
       <!-- Comparison. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Metrics and Results</h2>
+          <h2 class="title is-3">Metrics</h2>
           <div class="content has-text-justified">
 
             <!-- <img src="static/images/leaderboard.jpeg"> -->
-            For open-ended questions, we set 6 dimensions for evaluation:
+            
+            For closed-form questions, we have following metrics:
 
-              1. Correctness of the plan
-              2. Consistency between plan and code
-              3. Self-debug correctness
-              4. Summary correctness
-              5. Correctness of the code explanation
-              6. Overall correctness
-            For closed-form questions,
-
-              Accuracy proportional by subquestions: All the questions have a same weight and every subquestion shares the weight equally, which means a question contains more subquestions, every subquestion under it takes a lighter weight.
-
-              Accuracy by questions: Only all the subquestions under the question answered correctly we consider the question right.
-
-              Accuracy by subquestions: All the subquestions have a same weight.
-
-
+Proportional Accuracy by Subquestions (PASQ):
+$$
+\text{PSAQ} = \frac{1}{N} \sum_{i=1}^{N} \left( \frac{1}{M_i} \sum_{j=1}^{M_i} I_{ij} \right)
+$$
+Here, $N$ is the total number of questions, $M_i$ is the number of subquestions for the i-th question, and $I_{ij}$ is the indicator function for the j-th subquestion of the i-th question.
+Accuracy by Questions (ABQ):
+$$
+\text{ABQ} = \frac{1}{N} \sum_{i=1}^{N} \left( \prod_{j=1}^{M_i} I_{ij} \right)
+$$
+In this expression, the product 
+$\prod_{j=1}^{M_i} I_{ij}$ equals 1 if all subquestions of the \(i\)-th question are answered correctly, and 0 otherwise.
+Uniform Accuracy by Subquestions (UASQ):
+$$
+\text{UASQ} = \frac{1}{\sum_{i=1}^{N} M_i} \sum_{i=1}^{N} \sum_{j=1}^{M_i} I_{ij}
+$$
+Here, the total accuracy is the sum of the values of the indicator function across all subquestions, normalized by the total number of subquestions in the dataset.
           </div>
         </div>
       </div>
@@ -257,14 +274,30 @@
     </div>
   </section>
 
-  
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Comparison. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Evaluation</h2>
+          <div class="content has-text-justified">
+
+            
+            For closed-form questions, we prompt LLM with question description and constraints at first time. Considering that most models hardly follow the format requirements, we add a reformat step after the models respond with gpt-3.5-turbo-16k which formats the responses with the format requirements. Here's a figure illustrating this process:
+		<!-- <img src="static/images/case-study-eval-data.png"> -->
+          </div>
+        </div>
+      </div>
+      <!--/ Comparison. -->
+    </div>
+  </section>
 
   <section class="section">
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Leaderboard</h2>
-           <img src="static/images/concept.png" />
+           <img src="static/images/spider.png" />
         </div>
       </div>
     </div>
@@ -289,7 +322,7 @@
                 <p align="left">
                 
                
-                  <div class="left"><b>Notice</b>: We set temperature=0.2, top_p=1.0 and frequency_penalty=0.0 for all the models.
+                  <div class="left"><b>Notice</b>: We set temperature=0.2, top_p=1.0 and frequency_penalty=0.0 for all the models.  <p style="color: red;"> Regrettably, the open-source LLMs enumerated below are currently incapable of adhering to agent directives or delivering substantively meaningful responses. In response to this limitation, we have developed a Supervised Fine-Tuning (SFT) dataset aimed at refining these models. For these open-source LLMs, the table below delineates the enhancements observed post-finetuning. Please anticipate the imminent release of both the SFT dataset and its comprehensive details. </p>
                   </div>
                  
                 </p>
@@ -309,9 +342,9 @@
                       <th>Rank</th>
                       <th>Model Name</th>
                       <th># Params. (in B)</th>
-                      <th>Accuracy proportional by subquestions</th>
+                      <th>Proportional Accuracy by Subquestions</th>
                       <th>Accuracy by questions</th>
-                      <th>Accuracy by subquestions</th>
+                      <th>Uniform Accuracy by subquestions</th>
                       <!-- <th>Dev Set Std</th>
                       <th>Test Set Score</th>
                       <th>Test Set Std</th>
@@ -375,7 +408,7 @@
                     <tr>
                       <td>3</td>
                       
-                        <td><a href="https://github.com/facebookresearch/codellama">CodeLlama-7B + SFT</a></td>
+                        <td><a href="https://github.com/facebookresearch/codellama">CodeLlama-7B</a></td>
                       
                       
                         <td class="dt-center">7</td>
@@ -401,7 +434,7 @@
                     <tr>
                       <td>4</td>
                       
-                        <td><a href="https://github.com/facebookresearch/codellama">CodeLlama-7B-python + SFT</a></td>
+                        <td><a href="https://github.com/facebookresearch/codellama">CodeLlama-7B-python</a></td>
                       
                       
                         <td class="dt-center">7</td>
@@ -427,7 +460,7 @@
                     <tr>
                       <td>5</td>
                       
-                        <td><a href="https://github.com/facebookresearch/llama">Llama2-7B + SFT</a></td>
+                        <td><a href="https://github.com/facebookresearch/llama">Llama2-7B</a></td>
                       
                       
                         <td class="dt-center">7</td>
@@ -453,10 +486,36 @@
                     <tr>
                       <td>6</td>
                       
-                        <td><a href="https://github.com/THUDM/ChatGLM3">ChatGLM3 + SFT</a></td>
+                        <td><a href="https://github.com/nlpxucan/WizardLM">WizardCoder-Python-7B-V1.0</a></td>
                       
                       
                         <td class="dt-center">7</td>
+                      
+                      <!-- <td></td> -->
+                      <td class="dt-center">33.59%</td>
+                      <td class="dt-center">30.48%</td>
+                      <td class="dt-center">28.75%</td>
+                      <!-- 
+                        <td></td>
+                      
+                      <td></td>
+                      
+                        <td></td>
+                      
+                      <td></td>
+                      
+                        <td></td>
+                       -->
+                      <td></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>7</td>
+                      
+                        <td><a href="https://github.com/THUDM/ChatGLM3">ChatGLM3</a></td>
+                      
+                      
+                        <td class="dt-center">6</td>
                       
                       <!-- <td></td> -->
                       <td class="dt-center">18.10%</td>

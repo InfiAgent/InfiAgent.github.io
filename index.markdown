@@ -79,7 +79,7 @@ layout: mydefault
             More
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://infi-coder.github.io/inficoder-eval/">
+            <a class="navbar-item" href="https://github.com/InfiAgent/ADA-agent/tree/main/evaluation">
               InfiCoder-Eval
             </a>
           </div>
@@ -97,7 +97,7 @@ layout: mydefault
 
   <div class="container">
     <div class="column has-text-centered">
-      <img style="max-width: 200px; margin-bottom: -50px;" src="static/images/InfiAgent.png">
+      <img style="max-width: 200px; margin-bottom: -50px;" src="static/images/infiagent_logo.png">
     </div>
   </div>
 
@@ -133,14 +133,14 @@ layout: mydefault
                 
                 <!-- Dataset Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/infi-coder/ffqa-evaluation-harness"
+                  <a href="https://github.com/InfiAgent/ADA-agent"
                      class="external-link button is-normal is-rounded is-dark" target='_blank'>
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Inference Repo</span>
+                    <span>Project Repo</span>
                   </a>
-                  <a href="https://github.com/infi-coder/inficoder-eval-framework"
+                  <a href="https://github.com/InfiAgent/ADA-agent/tree/main/evaluation"
                      class="external-link button is-normal is-rounded is-dark" target='_blank'>
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -329,7 +329,7 @@ Here, the total accuracy is the sum of the values of the indicator function acro
                 <p align="left">
                 
                
-                  <div class="left"><b>Notice</b>: We set temperature=0.2, top_p=1.0 and frequency_penalty=0.0 for all the models.
+                  <div class="left"><b>Notice</b>: We set temperature=0.2, top_p=1.0 and frequency_penalty=0.0 for all the models.  <p style="color: red;"> Regrettably, the open-source LLMs enumerated below are currently incapable of adhering to agent directives or delivering substantively meaningful responses. In response to this limitation, we have developed a Supervised Fine-Tuning (SFT) dataset aimed at refining these models. For these open-source LLMs, the table below delineates the enhancements observed post-finetuning. Please anticipate the imminent release of both the SFT dataset and its comprehensive details. </p>
                   </div>
                  
                 </p>
