@@ -289,7 +289,7 @@ Here, the total accuracy is the sum of the values of the indicator function acro
           <h2 class="title is-3">Evaluation</h2>
           <div class="content has-text-justified">
 
-            <!-- <img src="static/images/leaderboard.jpeg"> -->
+            <!-- <img src="static/images/case-study-eval-data.png"> -->
             
 
           </div>
