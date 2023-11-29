@@ -241,21 +241,33 @@ layout: mydefault
           <div class="content has-text-justified">
 
             <!-- <img src="static/images/leaderboard.jpeg"> -->
-            For open-ended questions, we set 6 dimensions for evaluation:
+            
+            For closed-form questions, 
 
-              1. Correctness of the plan
-              2. Consistency between plan and code
-              3. Self-debug correctness
-              4. Summary correctness
-              5. Correctness of the code explanation
-              6. Overall correctness
-            For closed-form questions,
+- **Proportional Accuracy by Subquestions (PASQ):**
 
-              Accuracy proportional by subquestions: All the questions have a same weight and every subquestion shares the weight equally, which means a question contains more subquestions, every subquestion under it takes a lighter weight.
+$$
+\text{PSAQ} = \frac{1}{N} \sum_{i=1}^{N} \left( \frac{1}{M_i} \sum_{j=1}^{M_i} I_{ij} \right)
+$$
 
-              Accuracy by questions: Only all the subquestions under the question answered correctly we consider the question right.
+Here, $N$ is the total number of questions, $M_i$ is the number of subquestions for the i-th question, and $I_{ij}$ is the indicator function for the j-th subquestion of the i-th question.
 
-              Accuracy by subquestions: All the subquestions have a same weight.
+- **Accuracy by Questions (ABQ):**
+
+$$
+\text{ABQ} = \frac{1}{N} \sum_{i=1}^{N} \left( \prod_{j=1}^{M_i} I_{ij} \right)
+$$
+
+In this expression, the product 
+\($\prod_{j=1}^{M_i} I_{ij}$\) equals 1 if all subquestions of the \(i\)-th question are answered correctly, and 0 otherwise.
+
+- **Uniform Accuracy by Subquestions (UASQ):**
+
+$$
+\text{UASQ} = \frac{1}{\sum_{i=1}^{N} M_i} \sum_{i=1}^{N} \sum_{j=1}^{M_i} I_{ij}
+$$
+
+Here, the total accuracy is the sum of the values of the indicator function across all subquestions, normalized by the total number of subquestions in the dataset.
 
 
           </div>
