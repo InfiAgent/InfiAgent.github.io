@@ -81,6 +81,12 @@ layout: mydefault
     </div>
   </div>
 
+  <div class="container">
+    <div class="column has-text-centered">
+      <img style="max-width: 200px; margin-bottom: -50px;" src="static/images/InfiAgent.png">
+    </div>
+  </div>
+
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -372,7 +378,7 @@ layout: mydefault
       <!-- Benchmarking Tutorial -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Have a Try!</h2>
+          <h2 class="title is-3">Pipeline Onboarding</h2>
           <div class="content has-text-justified">
             <h3>Setup</h3>
             <ol>
