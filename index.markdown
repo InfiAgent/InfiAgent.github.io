@@ -350,8 +350,8 @@ Here, the total accuracy is the sum of the values of the indicator function acro
                       <th>Model Name</th>
                       <th># Params. (in B)</th>
                       <th>Proportional Accuracy by Subquestions</th>
-                      <th>Accuracy by questions</th>
-                      <th>Uniform Accuracy by subquestions</th>
+                      <th>Accuracy by Questions</th>
+                      <th>Uniform Accuracy by Subquestions</th>
                       <!-- <th>Dev Set Std</th>
                       <th>Test Set Score</th>
                       <th>Test Set Std</th>
