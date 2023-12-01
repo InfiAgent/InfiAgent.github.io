@@ -209,9 +209,9 @@ layout: mydefault
           We build data analysis query and response given existing csv files.  Here is the construction pipeline. 
           <img src="static/images/dataset_construction_eval.png"> 
             
-            Our dataset contains 400 questions with 72 csv files. Here're some examples of our generated questions.
+            We split the dataset into validation set and test set. The validation dataset contains 400 questions with 72 csv files. It is open to public and the test set is used for avoiding data leakage. All the subsequent information is based on the validation set. Here're some examples of the generated questions:
 	  <img src="static/images/question_examples.png"> 
-     	    We classify csv files used in the evaluation dataset into 9 categories based on their domains:
+     	    We categorize CSV files within the dataset into nine distinct categories, determined by their respective domains:
 
             <ul>
               <li>Finance and Economics </li>
@@ -225,11 +225,11 @@ layout: mydefault
               <li>Other Categories</li>
             </ul>
 
-            <p>Here's the pie chart for the file categorization:</p>
+            <p>Below is the pie chart depicting the categorical distribution:</p>
 
              <img src="static/images/domain.png">
 
-            <p>We also check the statistics on the data analysis concepts involved by each question.</p>
+            <p>We conduct statistical analyses on the individual concepts associated with each question, accounting for scenarios where a question encompasses multiple concepts:</p>
 
             <img src="static/images/concept.png">
 
