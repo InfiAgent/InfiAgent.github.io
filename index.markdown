@@ -79,8 +79,8 @@ layout: mydefault
             More
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://github.com/InfiAgent/ADA-agent/tree/main/evaluation">
-              InfiCoder-Eval
+            <a class="navbar-item" href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/ADA-agent">
+              ADA-Agent-Eval
             </a>
           </div>
         </div>
