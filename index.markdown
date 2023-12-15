@@ -68,7 +68,7 @@ layout: mydefault
     </div>
     <div class="navbar-menu">
       <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-        <a class="navbar-item" href="https://github.com/InfiAgent/ADA-agent/">
+        <a class="navbar-item" href="hhttps://github.com/InfiAgent/InfiAgent/tree/main">
           <span class="icon">
             <i class="fas fa-home"></i>
           </span>
@@ -79,7 +79,7 @@ layout: mydefault
             More
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/ADA-agent">
+            <a class="navbar-item" href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/ADA-Agent">
               ADA-Agent-Eval
             </a>
           </div>
@@ -140,7 +140,7 @@ layout: mydefault
                     </span>
                     <span>Project Repo</span>
                   </a>
-                  <a href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/ADA-agent"
+                  <a href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/ADA-Agent"
                      class="external-link button is-normal is-rounded is-dark" target='_blank'>
                     <span class="icon">
                       <i class="fab fa-github"></i>
