@@ -95,7 +95,7 @@ records:
   rank: 12
   size: 6
   title: chatglm3-6b
-- comment: 6
+- comment: null
   aps_score: 13.92%
   as_score: 18.27%
   a_score: 16.55%
