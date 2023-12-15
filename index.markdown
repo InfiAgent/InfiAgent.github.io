@@ -179,23 +179,6 @@ layout: mydefault
   </section>
 
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Comparison. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Evaluation</h2>
-          <div class="content has-text-justified">
-
-            
-            <p>For closed-form questions, we prompt LLMs with question description and constraints at the first time. Considering that most models hardly follow the format requirements, we add a reformat step after the models respond with gpt-3.5-turbo-16k which formats the responses with the format requirements. Here's a figure illustrating this process: </p>
-		        <img src="static/images/case-study-eval-data.png">
-          </div>
-        </div>
-      </div>
-      <!--/ Comparison. -->
-    </div>
-  </section>
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -373,6 +356,25 @@ layout: mydefault
     </div>
   </section>
 
+  
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Comparison. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Evaluation</h2>
+          <div class="content has-text-justified">
+
+            
+            <p>For closed-form questions, we prompt LLMs with question description and constraints at the first time. Considering that most models hardly follow the format requirements, we add a reformat step after the models respond with gpt-3.5-turbo-16k which formats the responses with the format requirements. Here's a figure illustrating this process: </p>
+		        <img src="static/images/case-study-eval-data.png">
+          </div>
+        </div>
+      </div>
+      <!--/ Comparison. -->
+    </div>
+  </section>
+
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Comparison. -->
@@ -407,6 +409,8 @@ Here, the total accuracy is the sum of the values of the indicator function acro
       <!--/ Comparison. -->
     </div>
   </section>
+
+  
 
   
   <section class="section">
