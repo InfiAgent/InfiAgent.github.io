@@ -6,10 +6,10 @@ layout: mydefault
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="InfiAgent: An Open-source Agent Framework">
+  <meta name="description" content="ADA-Agent: An Open-source Agent Framework">
   <meta name="keywords" content="InfiAgent-DS, code-generation, large-language-model, benchmark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>InfiAgent: Building and Evaluating Agents on Data Analysis Tasks</title>
+  <title>ADA-Agent-Eval: Building and Evaluating Agents on Data Analysis Tasks</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -106,7 +106,7 @@ layout: mydefault
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">InfiAgent-Eval: Evaluating Agents on Data Analysis Tasks
+            <h1 class="title is-1 publication-title">ADA-Agent-Eval: Evaluating Agents on Data Analysis Tasks
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -171,7 +171,7 @@ layout: mydefault
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
-          InfiAgent is a project to build and evalute agents. We start from data analysis and build a benchmark InfiAgent-Eval. 
+          ADA-Agent is a project to build and evalute agents for advanced data analysis. 
         </h2>
         <img src="static/images/framework.png">
       </div>
