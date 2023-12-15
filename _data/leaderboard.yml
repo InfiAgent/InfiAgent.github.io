@@ -61,7 +61,7 @@ records:
   a_score: 29.07%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 8
-  size: null
+  size: 14
   title: Qwen-14B-Chat
 - comment: null
   aps_score: 29.07%
