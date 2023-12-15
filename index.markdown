@@ -133,14 +133,14 @@ layout: mydefault
                 
                 <!-- Dataset Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/InfiAgent/ADA-agent"
+                  <a href="https://github.com/InfiAgent/InfiAgent/tree/main"
                      class="external-link button is-normal is-rounded is-dark" target='_blank'>
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Project Repo</span>
                   </a>
-                  <a href="https://github.com/InfiAgent/ADA-agent/tree/main/evaluation"
+                  <a href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/ADA-agent"
                      class="external-link button is-normal is-rounded is-dark" target='_blank'>
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -171,7 +171,7 @@ layout: mydefault
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
-          ADA-Agent is a project to build and evalute agents for advanced data analysis. 
+          ADA-Agent is a project to build and evalute agents for advanced data analysis. Agent evaluation has been an open and challenging problem. 
         </h2>
         <img src="static/images/framework.png">
       </div>
