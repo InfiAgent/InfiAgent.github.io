@@ -92,15 +92,15 @@ records:
   as_score: 18.41%
   a_score: 16.49%
   link: https://platform.openai.com/docs/models/gpt-3-5
-  rank: 2
-  size: null
+  rank: 12
+  size: 6
   title: chatglm3-6b
 - comment: 6
   aps_score: 13.92%
   as_score: 18.27%
   a_score: 16.55%
   link: https://platform.openai.com/docs/models/gpt-3-5
-  rank: 12
+  rank: 13
   size: 6
   title: agentlm-6b
 
