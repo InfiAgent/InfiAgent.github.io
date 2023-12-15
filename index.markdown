@@ -181,102 +181,6 @@ layout: mydefault
 
   <section class="section">
     <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Overview</h2>
-          <div class="content has-text-justified">
-            <p>
-              The advent of Large Language Models (LLMs) has spurred the development of LLM-augmented Autonomous Agents (LAAs). These agents are capable of generating and executing code through ongoing interactions between their core LLM and the code execution environment. In this project, we introduce Infinite Agent (InfiAgent), a LAA focused data analysis and code writing. Our agent is fine-tuned on multiple open-sourced LLMs including Llama2, chatGLM3, and Code Llama. The fine-tuning process employs a unique pipeline for Supervised Fine-Tuning (SFT) data collection, involving the creation and optimization of ReAct conversations using GPT. Furthermore, we have developed a GPT-enabled automatic evaluation benchmark question set (InfiAgent-Eval), which covers various data analysis aspects such as visualization, correlation analysis, and data transformation, providing a comprehensive means for quantitatively assessing LAAs' performance across diverse tasks. Our preliminary results suggest that Infinite Agent could significantly advance the field of autonomous code generation and execution, with potential implications in areas such as software development, data science, and automated problem-solving. This page is dedicated to elucidating the intricacies of the InfiAgent-Eval framework, encompassing aspects such as dataset construction, evaluation metrics, analytical assessment, leaderboard organization, and the procedural nuances of pipeline onboarding. 
-            </p>
-          </div>
-        </div>
-      </div>
-      <!--/ Abstract. -->
-    </div>
-  </section>
-
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Example. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Dataset Construction</h2>
-          <div class="content has-text-justified">
-
-
-          We build data analysis query and response given existing csv files.  Here is the construction pipeline. 
-          <img src="static/images/dataset_construction_eval.png"> 
-            
-            We split the dataset into validation set and test set. The validation dataset contains 400 questions with 72 csv files. It is open to public and the test set is used for avoiding data leakage. All the subsequent information is based on the validation set. Here're some examples of the generated questions:
-	  <img src="static/images/question_examples.png"> 
-     	    We categorize CSV files within the dataset into nine distinct categories, determined by their respective domains:
-
-            <ul>
-              <li>Finance and Economics </li>
-              <li>Health and Medical</li>
-              <li>Demographics and Social Science</li>
-              <li>Marketing and Consumer Behavior</li>
-              <li>Energy and Environmental Monitoring</li>
-              <li>Transportation, Logistics, and Tourism</li>
-              <li>Culture, Entertainment, and Media</li>
-              <li>Scientific Research and Technology</li>
-              <li>Other Categories</li>
-            </ul>
-
-            <p>Below is the pie chart depicting the categorical distribution:</p>
-
-             <img src="static/images/domain.png">
-
-            <p>We conduct statistical analyses on the individual concepts associated with each question, accounting for scenarios where a question encompasses multiple concepts:</p>
-
-            <img src="static/images/concept.png">
-
-          </div>
-        </div>
-      </div>
-      <!--/ Example. -->
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Comparison. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Metrics</h2>
-          <div class="content has-text-justified">
-
-            <!-- <img src="static/images/leaderboard.jpeg"> -->
-            
-            For closed-form questions, we have following metrics:
-
-Proportional Accuracy by Subquestions (PASQ):
-$$
-\text{PSAQ} = \frac{1}{N} \sum_{i=1}^{N} \left( \frac{1}{M_i} \sum_{j=1}^{M_i} I_{ij} \right)
-$$
-Here, $N$ is the total number of questions, $M_i$ is the number of subquestions for the i-th question, and $I_{ij}$ is the indicator function for the j-th subquestion of the i-th question.
-Accuracy by Questions (ABQ):
-$$
-\text{ABQ} = \frac{1}{N} \sum_{i=1}^{N} \left( \prod_{j=1}^{M_i} I_{ij} \right)
-$$
-In this expression, the product 
-$\prod_{j=1}^{M_i} I_{ij}$ equals 1 if all subquestions of the \(i\)-th question are answered correctly, and 0 otherwise.
-Uniform Accuracy by Subquestions (UASQ):
-$$
-\text{UASQ} = \frac{1}{\sum_{i=1}^{N} M_i} \sum_{i=1}^{N} \sum_{j=1}^{M_i} I_{ij}
-$$
-Here, the total accuracy is the sum of the values of the indicator function across all subquestions, normalized by the total number of subquestions in the dataset.
-          </div>
-        </div>
-      </div>
-      <!--/ Comparison. -->
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container is-max-desktop">
       <!-- Comparison. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -406,6 +310,104 @@ Here, the total accuracy is the sum of the values of the indicator function acro
       </div>
     </div>
   </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Overview</h2>
+          <div class="content has-text-justified">
+            <p>
+              The advent of Large Language Models (LLMs) has spurred the development of LLM-augmented Autonomous Agents (LAAs). These agents are capable of generating and executing code through ongoing interactions between their core LLM and the code execution environment. In this project, we introduce Infinite Agent (InfiAgent), a LAA focused data analysis and code writing. Our agent is fine-tuned on multiple open-sourced LLMs including Llama2, chatGLM3, and Code Llama. The fine-tuning process employs a unique pipeline for Supervised Fine-Tuning (SFT) data collection, involving the creation and optimization of ReAct conversations using GPT. Furthermore, we have developed a GPT-enabled automatic evaluation benchmark question set (InfiAgent-Eval), which covers various data analysis aspects such as visualization, correlation analysis, and data transformation, providing a comprehensive means for quantitatively assessing LAAs' performance across diverse tasks. Our preliminary results suggest that Infinite Agent could significantly advance the field of autonomous code generation and execution, with potential implications in areas such as software development, data science, and automated problem-solving. This page is dedicated to elucidating the intricacies of the InfiAgent-Eval framework, encompassing aspects such as dataset construction, evaluation metrics, analytical assessment, leaderboard organization, and the procedural nuances of pipeline onboarding. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Example. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Dataset Construction</h2>
+          <div class="content has-text-justified">
+
+
+          We build data analysis query and response given existing csv files.  Here is the construction pipeline. 
+          <img src="static/images/dataset_construction_eval.png"> 
+            
+            We split the dataset into validation set and test set. The validation dataset contains 400 questions with 72 csv files. It is open to public and the test set is used for avoiding data leakage. All the subsequent information is based on the validation set. Here're some examples of the generated questions:
+	  <img src="static/images/question_examples.png"> 
+     	    We categorize CSV files within the dataset into nine distinct categories, determined by their respective domains:
+
+            <ul>
+              <li>Finance and Economics </li>
+              <li>Health and Medical</li>
+              <li>Demographics and Social Science</li>
+              <li>Marketing and Consumer Behavior</li>
+              <li>Energy and Environmental Monitoring</li>
+              <li>Transportation, Logistics, and Tourism</li>
+              <li>Culture, Entertainment, and Media</li>
+              <li>Scientific Research and Technology</li>
+              <li>Other Categories</li>
+            </ul>
+
+            <p>Below is the pie chart depicting the categorical distribution:</p>
+
+             <img src="static/images/domain.png">
+
+            <p>We conduct statistical analyses on the individual concepts associated with each question, accounting for scenarios where a question encompasses multiple concepts:</p>
+
+            <img src="static/images/concept.png">
+
+          </div>
+        </div>
+      </div>
+      <!--/ Example. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Comparison. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Metrics</h2>
+          <div class="content has-text-justified">
+
+            <!-- <img src="static/images/leaderboard.jpeg"> -->
+            
+            For closed-form questions, we have following metrics:
+
+Proportional Accuracy by Subquestions (PASQ):
+$$
+\text{PSAQ} = \frac{1}{N} \sum_{i=1}^{N} \left( \frac{1}{M_i} \sum_{j=1}^{M_i} I_{ij} \right)
+$$
+Here, $N$ is the total number of questions, $M_i$ is the number of subquestions for the i-th question, and $I_{ij}$ is the indicator function for the j-th subquestion of the i-th question.
+Accuracy by Questions (ABQ):
+$$
+\text{ABQ} = \frac{1}{N} \sum_{i=1}^{N} \left( \prod_{j=1}^{M_i} I_{ij} \right)
+$$
+In this expression, the product 
+$\prod_{j=1}^{M_i} I_{ij}$ equals 1 if all subquestions of the \(i\)-th question are answered correctly, and 0 otherwise.
+Uniform Accuracy by Subquestions (UASQ):
+$$
+\text{UASQ} = \frac{1}{\sum_{i=1}^{N} M_i} \sum_{i=1}^{N} \sum_{j=1}^{M_i} I_{ij}
+$$
+Here, the total accuracy is the sum of the values of the indicator function across all subquestions, normalized by the total number of subquestions in the dataset.
+          </div>
+        </div>
+      </div>
+      <!--/ Comparison. -->
+    </div>
+  </section>
+
   
   <section class="section">
     <div class="container is-max-desktop">
@@ -486,7 +488,7 @@ python3 ./src/activities/eval.py --llm "meta-llama/Llama-2-7b-hf"</code></pre>
         <h2 class="title">BibTeX</h2>
         <pre><code>@misc{li2023inficodereval,
   author = {InfiAgent Team},
-  title = {InfiAgent: Building and Evaluating Agents on Data Analysis},
+  title = {ADA-Agent: Building and Evaluating Agents on Data Analysis},
   year = {2023},
   publisher = {Github Pages},
   howpublished = "\url{https://infiagent.github.io/}"
