@@ -110,7 +110,7 @@ layout: mydefault
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                InfiAgent Team @ ByteDance Ltd. and Zhejiang University 
+                InfiAgent Team 
               </span>
               <br>
               <!-- <span class="author-block">
@@ -303,7 +303,7 @@ layout: mydefault
           <h2 class="title is-3">Overview</h2>
           <div class="content has-text-justified">
             <p>
-              The advent of Large Language Models (LLMs) has spurred the development of LLM-augmented Autonomous Agents (LAAs). These agents are capable of generating and executing code through ongoing interactions between their core LLM and the code execution environment. In this project, we introduce Infinite Agent (InfiAgent), a LAA focused data analysis and code writing. Our agent is fine-tuned on multiple open-sourced LLMs including Llama2, chatGLM3, and Code Llama. The fine-tuning process employs a unique pipeline for Supervised Fine-Tuning (SFT) data collection, involving the creation and optimization of ReAct conversations using GPT. Furthermore, we have developed a GPT-enabled automatic evaluation benchmark question set (InfiAgent-Eval), which covers various data analysis aspects such as visualization, correlation analysis, and data transformation, providing a comprehensive means for quantitatively assessing LAAs' performance across diverse tasks. Our preliminary results suggest that Infinite Agent could significantly advance the field of autonomous code generation and execution, with potential implications in areas such as software development, data science, and automated problem-solving. This page is dedicated to elucidating the intricacies of the InfiAgent-Eval framework, encompassing aspects such as dataset construction, evaluation metrics, analytical assessment, leaderboard organization, and the procedural nuances of pipeline onboarding. 
+              The advent of Large Language Models (LLMs) has spurred the development of LLM-augmented Autonomous Agents (LAAs). These agents are capable of generating and executing code through ongoing interactions between their core LLM and the code execution environment. In this project, we introduce Infinite Agent (InfiAgent), a LAA focused data analysis and code writing. We have developed an automatic evaluation benchmark (InfiAgent-Eval), which covers various data analysis topics such as visualization, correlation analysis, and data transformation, providing a comprehensive means for quantitatively assessing LAAs' performance. This page describes the details of InfiAgent-Eval framework, including features such as dataset construction, evaluation metrics, analytical assessment, and the procedural details about pipeline onboarding. 
             </p>
           </div>
         </div>
@@ -325,7 +325,7 @@ layout: mydefault
           We build data analysis query and response given existing csv files.  Here is the construction pipeline. 
           <img src="static/images/dataset_construction_eval.png"> 
             
-            We split the dataset into validation set and test set. The validation dataset contains 400 questions with 72 csv files. It is open to public and the test set is used for avoiding data leakage. All the subsequent information is based on the validation set. Here're some examples of the generated questions:
+            We split the dataset into a validation set and a test set. The validation dataset contains 400 questions with 72 csv files. We only public the validation set to avoid data leakage. Here're some examples:
 	  <img src="static/images/question_examples.png"> 
      	    We categorize CSV files within the dataset into nine distinct categories, determined by their respective domains:
 
@@ -366,7 +366,7 @@ layout: mydefault
           <div class="content has-text-justified">
 
             
-            <p>For closed-form questions, we prompt LLMs with question description and constraints at the first time. Considering that most models hardly follow the format requirements, we add a reformat step after the models respond with gpt-3.5-turbo-16k which formats the responses with the format requirements. Here's a figure illustrating this process: </p>
+            <p>For closed-form questions, we prompt LLMs with question description. Considering that most models hardly follow the format requirements, we add a reformat step for all models by using gpt-3.5-turbo-16k to format the responses given the format requirements. Here's a figure illustrating this process: </p>
 		        <img src="static/images/case-study-eval-data.png">
           </div>
         </div>
@@ -385,7 +385,7 @@ layout: mydefault
 
             <!-- <img src="static/images/leaderboard.jpeg"> -->
             
-            For closed-form questions, we have following metrics:
+            For closed-form questions, we have defined the following metrics:
 
 Proportional Accuracy by Subquestions (PASQ):
 $$
@@ -422,7 +422,7 @@ Here, the total accuracy is the sum of the values of the indicator function acro
           <div class="content has-text-justified">
             <h3>Setup</h3>
             <ol>
-		<li>We have to initialize the environment using the following code:</li>
+		<li>Please initialize the environment using the following code:</li>
               <pre><code>conda create -n agent python==3.9.12
 pip3 install -r requirements.txt</code></pre>
 		    <li>We also build a Python code sandbox in our pipeline based on docker, you can use the following code to build your docker image:</li>
