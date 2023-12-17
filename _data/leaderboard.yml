@@ -22,7 +22,7 @@ records:
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 3
   size: 14
-  title: AdaAgent-14B
+  title: InfiAgent-14B
 - comment: null
   aps_score: 39.59%
   as_score: 47.59%
@@ -30,7 +30,7 @@ records:
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 4
   size: 7
-  title: AdaAgent-7B
+  title: InfiAgent-7B
 - comment: null
   aps_score: 37.28%
   as_score: 41.90%
