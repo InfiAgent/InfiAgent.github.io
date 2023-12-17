@@ -9,7 +9,7 @@ layout: mydefault
   <meta name="description" content="ADA-Agent: An Open-source Agent Framework">
   <meta name="keywords" content="InfiAgent-DS, code-generation, large-language-model, benchmark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ADA-Agent-Eval: Building and Evaluating Agents on Data Analysis Tasks</title>
+  <title>ADA-Agent: Building and Evaluating Agents on Data Analysis Tasks</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
