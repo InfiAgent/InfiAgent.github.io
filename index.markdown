@@ -187,8 +187,7 @@ layout: mydefault
           <h2 class="title is-3">Leaderboard</h2>
 
           <div class="content has-text-justified">
-          <p>In this section, we furnish a comprehensive evaluation of both close-source LLMs such as GPT-4 and GPT-3.5, as well as widely-utilized open-source LLMs. It is observed that the close-source LLMs demonstrate a proficient capacity to adhere to agent directives and produce logically coherent responses.
-          <span style="color: red;"> Regrettably, the open-source LLMs enumerated below are currently incapable of adhering to agent directives or delivering substantively meaningful responses. In response to this limitation, we have developed a Supervised Fine-Tuning (SFT) dataset aimed at refining these models. For these open-source LLMs, the table below delineates the enhancements observed post-finetuning. Please anticipate the imminent release of both the SFT dataset and its comprehensive details. </span></p> 
+          <p>In this section, we furnish a comprehensive evaluation of both close-source LLMs such as GPT-4 and GPT-3.5, as well as widely-utilized open-source LLMs. In addition, we test our InfiAgent, which is an agent for data analysis with supervised fine-tuning.
            <img src="static/images/spider.png">
            </div>
         </div>
