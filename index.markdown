@@ -106,7 +106,7 @@ layout: mydefault
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">ADA-Agent-Eval: Evaluating Agents on Data Analysis Tasks
+            <h1 class="title is-1 publication-title">InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -171,7 +171,7 @@ layout: mydefault
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
-          ADA-Agent is a project to build and evalute agents for advanced data analysis. Agent evaluation has been an open and challenging problem. 
+          InfiAgent-DABench is a project to build and evalute agents for advanced data analysis. Agent evaluation has been an open and challenging problem. 
         </h2>
         <img src="static/images/framework.png">
       </div>
@@ -302,7 +302,10 @@ layout: mydefault
           <h2 class="title is-3">Overview</h2>
           <div class="content has-text-justified">
             <p>
-              The advent of Large Language Models (LLMs) has spurred the development of LLM-augmented Autonomous Agents (LAAs). These agents are capable of generating and executing code through ongoing interactions between their core LLM and the code execution environment. In this project, we introduce Infinite Agent (InfiAgent), a LAA focused data analysis and code writing. We have developed an automatic evaluation benchmark (InfiAgent-Eval), which covers various data analysis topics such as summary statistics, correlation analysis, and data transformation, providing a comprehensive means for quantitatively assessing LAAs' performance. This page describes the details of InfiAgent-Eval framework, including features such as dataset construction, evaluation metrics, analytical assessment, and the procedural details about pipeline onboarding. 
+              The advent of Large Language Models (LLMs) has spurred the development of LLM-augmented Autonomous Agents (LAAs). These agents are capable of generating and executing code through ongoing interactions between their core LLM and the code execution environment. In this project, we introduce InfiAgent-DABench, the first benchmark specifically designed to evaluate LLM-based agents in data analysis tasks. This benchmark contains DAEval, a dataset consisting of data analysis questions derived from CSV files, and an agent framework to evaluate LLMs as data analysis agents.
+              
+              <!-- we introduce Infinite Agent (InfiAgent), a LAA focused data analysis and code writing. We have developed an automatic evaluation benchmark (InfiAgent-Eval), which covers various data analysis topics such as summary statistics, correlation analysis, and data transformation, providing a comprehensive means for quantitatively assessing LAAs' performance.  -->
+              This page describes the details of InfiAgent-DABench framework, including features such as dataset construction, evaluation metrics, analytical assessment, and the procedural details about pipeline onboarding. 
             </p>
           </div>
         </div>
