@@ -1,4 +1,4 @@
----
+<img width="1342" alt="image" src="https://github.com/InfiAgent/InfiAgent.github.io/assets/129724158/c7784e84-5da0-4491-8e36-b9214921a4b0">---
 layout: mydefault
 ---
 
@@ -503,11 +503,14 @@ python3 ./src/activities/eval.py --llm "meta-llama/Llama-2-7b-hf"</code></pre>
       <div class="bibtex-body">
         <h2 class="title">BibTeX</h2>
         <pre><code>@misc{li2023inficodereval,
-  author = {InfiAgent Team},
-  title = {ADA-Agent: Building and Evaluating Agents on Data Analysis},
-  year = {2023},
-  publisher = {Github Pages},
-  howpublished = "\url{https://infiagent.github.io/}"
+  @misc{hu2024infiagentdabench,
+      title={InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks}, 
+      author={Xueyu Hu and Ziyu Zhao and Shuang Wei and Ziwei Chai and Guoyin Wang and Xuwu Wang and Jing Su and Jingjing Xu and Ming Zhu and Yao Cheng and Jianbo Yuan and Kun Kuang and Yang Yang and Hongxia Yang and Fei Wu},
+      year={2024},
+      eprint={2401.05507},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 }</code></pre>
       </div>
     </div>
