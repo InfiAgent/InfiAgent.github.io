@@ -327,7 +327,7 @@ layout: mydefault
           We build data analysis query and response given existing csv files.  Here is the construction pipeline. 
           <img src="static/images/dataset_construction_eval.png"> 
             
-            We split the dataset into a validation set and a test set. The validation dataset contains 400 questions with 72 csv files. We only public the validation set to avoid data leakage. Here're some examples:
+            We split the dataset into a validation set and a test set. The validation dataset contains 311 questions with 55 csv files. We only public the validation set to avoid data leakage. Here're some examples:
 	  <img src="static/images/question_examples.png"> 
      	    We categorize CSV files within the dataset into nine distinct categories, determined by their respective domains:
 
