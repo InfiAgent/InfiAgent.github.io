@@ -349,7 +349,7 @@ layout: mydefault
 
             <p>We conduct statistical analyses on the individual concepts associated with each question, accounting for scenarios where a question encompasses multiple concepts:</p>
 
-            <img src="static/images/concept.png">
+            <img src="static/images/concepts.png">
 
           </div>
         </div>
