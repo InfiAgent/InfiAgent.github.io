@@ -187,7 +187,7 @@ layout: mydefault
           <h2 class="title is-3">Leaderboard</h2>
 
           <div class="content has-text-justified">
-          <p>In this section, we furnish a comprehensive evaluation of both close-source LLMs such as GPT-4 and GPT-3.5, as well as widely-utilized open-source LLMs. In addition, we test our DAAgent, which is an agent for data analysis with supervised fine-tuning.</p>
+          <p>In this section, we furnish a comprehensive evaluation of both close-source LLMs such as GPT-4 and GPT-3.5, as well as widely-utilized open-source LLMs. In addition, we test our DAAgent, which is an agent for data analysis with instruction-tuning.</p>
            <img src="static/images/spider.png">
            </div>
         </div>
