@@ -1,4 +1,4 @@
-<img width="1342" alt="image" src="https://github.com/InfiAgent/InfiAgent.github.io/assets/129724158/c7784e84-5da0-4491-8e36-b9214921a4b0">---
+---
 layout: mydefault
 ---
 
