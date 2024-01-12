@@ -502,15 +502,13 @@ python3 ./src/activities/eval.py --llm "meta-llama/Llama-2-7b-hf"</code></pre>
     <div class="container is-max-desktop content">
       <div class="bibtex-body">
         <h2 class="title">BibTeX</h2>
-        <pre><code>@misc{li2023inficodereval,
-  @misc{hu2024infiagentdabench,
+        <pre><code>@misc{hu2024infiagentdabench,
       title={InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks}, 
       author={Xueyu Hu and Ziyu Zhao and Shuang Wei and Ziwei Chai and Guoyin Wang and Xuwu Wang and Jing Su and Jingjing Xu and Ming Zhu and Yao Cheng and Jianbo Yuan and Kun Kuang and Yang Yang and Hongxia Yang and Fei Wu},
       year={2024},
       eprint={2401.05507},
       archivePrefix={arXiv},
       primaryClass={cs.CL}
-}
 }</code></pre>
       </div>
     </div>
