@@ -130,6 +130,16 @@ layout: mydefault
 
             <div class="column has-text-centered">
               <div class="publication-links">
+	      <!-- PDF Link. -->
+	      <span class="link-block">
+	        <a href="https://arxiv.org/abs/2401.05507"
+		  class="external-link button is-normal is-rounded is-dark" target='_blank'>
+		  <span class="icon">
+		    <i class="ai ai-arxiv"></i>
+		  </span>
+		  <span>Paper</span>
+	        </a>
+	      </span>
                 
                 <!-- Dataset Link. -->
                 <span class="link-block">
