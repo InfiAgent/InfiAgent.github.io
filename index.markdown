@@ -1,4 +1,4 @@
----
+f---
 layout: mydefault
 ---
 
@@ -345,7 +345,7 @@ layout: mydefault
 
             <p>Below is the pie chart depicting the categorical distribution:</p>
 
-             <img src="static/images/domains.pdf">
+             <img src="static/images/domains.png">
 
             <p>We conduct statistical analyses on the individual concepts associated with each question, accounting for scenarios where a question encompasses multiple concepts:</p>
 
