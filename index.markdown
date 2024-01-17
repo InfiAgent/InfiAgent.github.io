@@ -6,10 +6,10 @@ layout: mydefault
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="ADA-Agent: An Open-source Agent Framework">
+  <meta name="description" content="InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks">
   <meta name="keywords" content="InfiAgent-DS, code-generation, large-language-model, benchmark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ADA-Agent: Building and Evaluating Agents on Data Analysis Tasks</title>
+  <title>InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
