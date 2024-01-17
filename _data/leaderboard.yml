@@ -1,115 +1,178 @@
 records:
 - comment: null
-  aps_score: 70.16%
-  as_score: 75.32%
-  a_score: 76.32%
+  aps_score: 74.60%
+  as_score: 78.72%
+  a_score: 79.01%
   link: https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo
   rank: 1
   size: null
-  title: GPT-4 (0613)
+  title: gpt-4-0613
 - comment: null
-  aps_score: 54.02%
-  as_score: 58.95%
-  a_score: 53.22%
+  aps_score: 60.77%
+  as_score: 67.50%
+  a_score: 62.98%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 2
-  size: 72
-  title: Qwen-72B-Chat 
+  size: 34
+  title: daagent-34b 
 - comment: null
-  aps_score: 53.97%
-  as_score: 62.69%
-  a_score: 59.02%
+  aps_score: 60.13%
+  as_score: 65.94%
+  a_score: 64.27%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 3
   size: null
-  title: GPT-3.5 (turbo-0613)  
+  title: abab5.5-chat  
 - comment: null
-  aps_score: 49.20%
-  as_score: 54.67%
-  a_score: 48.80%
+  aps_score: 58.20%
+  as_score: 65.70%
+  a_score: 61.88%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 4
   size: null
-  title: Gemini-Pro
+  title: gpt-3.5-turbo-0613
 - comment: null
-  aps_score: 46.62%
-  as_score: 51.47%
-  a_score: 59.02%
+  aps_score: 57.56%
+  as_score: 62.46%
+  a_score: 56.17%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 5
-  size: 56
-  title: Mixtral-8x7B-Instruct-v0.1
+  size: 72
+  title: qwen-72b-chat
 - comment: null
-  aps_score: 42.04%
-  as_score: 46.68%
-  a_score: 44.16%
+  aps_score: 54.52%
+  as_score: 60.51%
+  a_score: 55.72%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 6
-  size: 33
-  title: deepseek-coder-33b-instruct 
+  size: 13
+  title: daagent-13b 
 - comment: null
-  aps_score: 40.19%
-  as_score: 45.37%
-  a_score: 42.07%
+  aps_score: 53.38%
+  as_score: 58.32%
+  a_score: 51.93%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 7
-  size: 34
-  title: Phind-CodeLlama-34B-v2
+  size: null
+  title: gemini-pro
 - comment: null
-  aps_score: 38.10%
-  as_score: 42.92%
-  a_score: 40.07%
+  aps_score: 49.20%
+  as_score: 54.02%
+  a_score: 51.38%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 8
-  size: 34
-  title: XwinCoder-34B
+  size: 46.7(12.9)
+  title: mixtral-8x7b-instruct-v0.1
 - comment: null
-  aps_score: 34.08%
-  as_score: 39.29%
-  a_score: 32.66%
+  aps_score: 49.02%
+  as_score: 57.63%
+  a_score: 54.19%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 9
   size: 14
-  title: Qwen-14B-Chat
+  title: daagent-7b
 - comment: null
-  aps_score: 33.76%
-  as_score: 38.95%
-  a_score: 34.67%
+  aps_score: 44.84%
+  as_score: 48.90%
+  a_score: 46.31%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 10
-  size: 7
-  title: Mistral-7B-Instruct-v0.2
+  size: 33
+  title: deepseek-coder-33b-instruct
 - comment: null
-  aps_score: 25.25%
-  as_score: 29.69%
-  a_score: 25.43%
+  aps_score: 43.41%
+  as_score: 49.65%
+  a_score: 46.96%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 11
-  size: 13
-  title: vicuna-13b-v1.5
+  size: null
+  title: claude-2.1
 - comment: null
-  aps_score: 21.75%
-  as_score: 25.03%
-  a_score: 21.13%
+  aps_score: 42.02%
+  as_score: 47.41%
+  a_score: 44.40%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 12
   size: 34
-  title: WizardCoder-Python-34B-V1.0
+  title: phind-codellama-34b-v2
 - comment: null
-  aps_score: 15.38%
-  as_score: 19.49%
-  a_score: 17.64%
+  aps_score: 39.87%
+  as_score: 45.46%
+  a_score: 42.73%
   link: https://platform.openai.com/docs/models/gpt-3-5
   rank: 13
+  size: 34
+  title: xwincoder-34b
+- comment: null
+  aps_score: 36.45%
+  as_score: 41.61%
+  a_score: 36.90%
+  link: https://platform.openai.com/docs/models/gpt-3-5
+  rank: 14
+  size: 7
+  title: mistral-7b-instruct-v0.2
+- comment: null
+  aps_score: 36.45%
+  as_score: 41.36%
+  a_score: 34.51%
+  link: https://platform.openai.com/docs/models/gpt-3-5
+  rank: 15
+  size: 14
+  title: qwen-14b-chat
+- comment: null
+  aps_score: 27.27%
+  as_score: 27.27%
+  a_score: 16.00%
+  link: https://platform.openai.com/docs/models/gpt-3-5
+  rank: 16
+  size: 7
+  title: qwen-7b-chat
+- comment: null
+  aps_score: 26.26%
+  as_score: 30.88%
+  a_score: 26.31%
+  link: https://platform.openai.com/docs/models/gpt-3-5
+  rank: 17
+  size: 13
+  title: vicuna-13b-v1.5
+- comment: null
+  aps_score: 23.79%
+  as_score: 26.82%
+  a_score: 25.05%
+  link: https://platform.openai.com/docs/models/gpt-3-5
+  rank: 17
+  size: 20
+  title: internlm-chat-20b
+- comment: null
+  aps_score: 23.13%
+  as_score: 26.45%
+  a_score: 22.40%
+  link: https://platform.openai.com/docs/models/gpt-3-5
+  rank: 17
+  size: 34
+  title: wizardcoder-python-34b-v1.0
+- comment: null
+  aps_score: 16.99%
+  as_score: 20.71%
+  a_score: 17.89%
+  link: https://platform.openai.com/docs/models/gpt-3-5
+  rank: 18
+  size: 7
+  title: agentlm-7b
+- comment: null
+  aps_score: 16.67%
+  as_score: 20.59%
+  a_score: 19.27%
+  link: https://platform.openai.com/docs/models/gpt-3-5
+  rank: 19
   size: 6
   title: chatglm3-6b
 - comment: null
-  aps_score: 16.45%
-  as_score: 19.96%
-  a_score: 17.13%
+  aps_score: 14.56%
+  as_score: 17.39%
+  a_score: 13.94%
   link: https://platform.openai.com/docs/models/gpt-3-5
-  rank: 14
-  size: 6
-  title: agentlm-6b
-#   title: phi-1
+  rank: 20
+  size: 34
+  title: codellama-34b-instruct
 # settings: main
