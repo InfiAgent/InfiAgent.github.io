@@ -11,7 +11,7 @@ records:
   aps_score: 60.77%
   as_score: 67.50%
   a_score: 62.98%
-  link: https://platform.openai.com/docs/models/gpt-3-5
+  link: https://arxiv.org/abs/2401.05507
   rank: 2
   size: 34
   title: daagent-34b 
@@ -19,7 +19,7 @@ records:
   aps_score: 60.13%
   as_score: 65.94%
   a_score: 64.27%
-  link: https://platform.openai.com/docs/models/gpt-3-5
+  link: https://api.minimax.chat/
   rank: 3
   size: null
   title: abab5.5-chat  
@@ -43,7 +43,7 @@ records:
   aps_score: 54.52%
   as_score: 60.51%
   a_score: 55.72%
-  link: https://platform.openai.com/docs/models/gpt-3-5
+  link: https://arxiv.org/abs/2401.05507
   rank: 6
   size: 13
   title: daagent-13b 
@@ -67,9 +67,9 @@ records:
   aps_score: 49.02%
   as_score: 57.63%
   a_score: 54.19%
-  link: https://platform.openai.com/docs/models/gpt-3-5
+  link: https://arxiv.org/abs/2401.05507
   rank: 9
-  size: 14
+  size: 7
   title: daagent-7b
 - comment: null
   aps_score: 44.84%
