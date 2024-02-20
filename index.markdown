@@ -238,6 +238,7 @@ layout: mydefault
                   <div class="left">For models with >30B parameters, we evaluate once due to resource limit, otherwise we evaluate three times and report the mean and standard deviation.
                   </div>
                 </p> -->
+	    <!--
                 <br>
                 <table class="table maintable stripe hover row-border order-column" id="maintable">
                   <thead>
@@ -301,7 +302,8 @@ layout: mydefault
         </div>
       </div>
     </div>
-  </section>
+  </section> 
+-->
 
 
   <section class="section">
