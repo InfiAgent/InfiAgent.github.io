@@ -190,7 +190,7 @@ layout: mydefault
 
 
 
-  <!-- <section class="section">
+  <section class="section">
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -301,7 +301,7 @@ layout: mydefault
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
 
   <section class="section">
