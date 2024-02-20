@@ -1,6 +1,6 @@
 # InfiAgent
 
-This is the repository that contains source code for the [InfiAgent](https://infi-coder.github.io/inficoder-eval/) website.
+This is the repository that contains source code for the [InfiAgent](https://infiagent.github.io/) website.
 
 ```
 
