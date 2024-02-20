@@ -190,7 +190,7 @@ layout: mydefault
 
 
 
-  <section class="section">
+  <!-- <section class="section">
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -198,7 +198,7 @@ layout: mydefault
 
           <div class="content has-text-justified">
           <p>In this section, we furnish a comprehensive evaluation of both close-source LLMs such as GPT-4 and GPT-3.5, as well as widely-utilized open-source LLMs. In addition, we test our DAAgent, which is an agent for data analysis with instruction-tuning.</p>
-           <img src="static/images/spider.png">
+           <img src="static/images/main_results.png">
            </div>
         </div>
       </div>
@@ -301,7 +301,7 @@ layout: mydefault
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <section class="section">
