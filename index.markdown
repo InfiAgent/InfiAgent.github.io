@@ -79,8 +79,8 @@ layout: mydefault
             More
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/ADA-Agent">
-              ADA-Agent-Eval
+            <a class="navbar-item" href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/DA-Agent">
+              InfiAgent-DABench
             </a>
           </div>
         </div>
@@ -150,7 +150,7 @@ layout: mydefault
                     </span>
                     <span>Project Repo</span>
                   </a>
-                  <a href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/ADA-Agent"
+                  <a href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/DA-Agent"
                      class="external-link button is-normal is-rounded is-dark" target='_blank'>
                     <span class="icon">
                       <i class="fab fa-github"></i>
