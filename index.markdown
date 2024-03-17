@@ -108,20 +108,19 @@ layout: mydefault
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks
             </h1>
-            <div class="is-size-5 publication-authors">
+        <div class="is-size-5 publication-authors">
               <span class="author-block">
-                InfiAgent Team 
+                Xueyu Hu<sup>1</sup>, Ziyu Zhao<sup>1</sup>, Shuang Wei<sup>2</sup>, Ziwei Chai<sup>1</sup>, Qianli Ma<sup>3</sup>,
               </span>
               <br>
-              <!-- <span class="author-block">
-                Main Maintainer: <a href="mailto:linyi.li@bytedance.com">Linyi Li</a>
-                <br>
-                Team Lead: <a href="mailto:hx.yang@bytedance.com">Hongxia Yang</a>
-              </span> -->
-              <!-- <span class="author-block">
-                <a href="https://xxx.github.io/">Siwei Wang</a><sup>1</sup></span>
-			        <br/> -->
-            </div>
+              <span class="author-block">
+                Guoyin Wang<sup>3</sup>, Xuwu Wang<sup>3</sup>, Jing Su<sup>3</sup>, Jingjing Xu<sup>3</sup>, Ming Zhu<sup>3</sup>,
+              </span>
+              <br>
+              <span class="author-block">
+                Yao Cheng<sup>3</sup>, Jianbo Yuan<sup>3</sup>, Jiwei Li<sup>1</sup>, Kun Kuang<sup>1</sup>, Yang Yang<sup>1</sup>, Hongxia Yang<sup>3</sup>, Fei Wu<sup>1</sup>
+              </span>
+          </div>
 
             <div class="is-size-5 publication-authors">
               <!-- <span class="author-block"><sup>1</sup>Caption of Quận 5, Ho Chi Minh City, Vietnam</span> -->
