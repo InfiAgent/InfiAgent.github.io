@@ -122,10 +122,13 @@ layout: mydefault
               </span>
           </div>
 
-            <div class="is-size-5 publication-authors">
-              <!-- <span class="author-block"><sup>1</sup>Caption of Quận 5, Ho Chi Minh City, Vietnam</span> -->
-              <!-- <span class="author-block"><sup>2</sup>Peking University,</span> -->
-            </div>
+        <div class="is-size-5 publication-authors">
+		<span class="author-block"><sup>1</sup>Zhejiang University</span>
+		<br>
+		<span class="author-block"><sup>2</sup>Rochester Institute of Technology</span>
+		<br>
+		<span class="author-block"><sup>3</sup>ByteDance Inc.</span>
+        </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
