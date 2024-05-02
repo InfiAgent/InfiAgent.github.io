@@ -106,7 +106,7 @@ layout: mydefault
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">ICML2024: InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks
+            <h1 class="title is-1 publication-title">ICML2024:<br>InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks
             </h1>
         <div class="is-size-5 publication-authors">
               <span class="author-block">
