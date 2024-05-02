@@ -7,7 +7,7 @@ layout: mydefault
 <head>
   <meta charset="utf-8">
   <meta name="description" content="InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks">
-  <meta name="keywords" content="InfiAgent-DS, code-generation, large-language-model, benchmark">
+  <meta name="keywords" content="InfiAgent-DABench, code-generation, large-language-model, benchmark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks</title>
 
@@ -106,7 +106,7 @@ layout: mydefault
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks
+            <h1 class="title is-1 publication-title">ICML2024: InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks
             </h1>
         <div class="is-size-5 publication-authors">
               <span class="author-block">
