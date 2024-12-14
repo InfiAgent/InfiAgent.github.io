@@ -82,29 +82,12 @@ layout: mydefault
             <a class="navbar-item" href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/DA-Agent">
               InfiAgent-DABench
             </a>
-          </div>
-        </div>
-      </div>
-    <div class="navbar-menu">
-      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-        <a class="navbar-item" href="hhttps://github.com/InfiAgent/InfiAgent/tree/main">
-          <span class="icon">
-            <i class="fas fa-home"></i>
-          </span>
-        </a>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More
-          </a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/DA-Agent">
+	    <a class="navbar-item" href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/DA-Agent">
               InfiAgent-DABench
             </a>
           </div>
         </div>
       </div>
-
     </div>
   </nav>
 
