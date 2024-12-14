@@ -79,11 +79,8 @@ layout: mydefault
             More
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/DA-Agent">
-              InfiAgent-DABench
-            </a>
-	    <a class="navbar-item" href="https://github.com/InfiAgent/InfiAgent/tree/main/examples/DA-Agent">
-              InfiAgent-DABench
+            <a class="navbar-item" href="https://os-agent-survey.github.io/">
+              OS-Agent-Survey
             </a>
           </div>
         </div>
