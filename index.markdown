@@ -80,7 +80,7 @@ layout: mydefault
           </a>
           <div class="navbar-dropdown">
             <a class="navbar-item" href="https://os-agent-survey.github.io/">
-              OS-Agent-Survey
+              OS Agents: A Survey on MLLM-based Agents for General Computing Devices Control
             </a>
           </div>
         </div>
